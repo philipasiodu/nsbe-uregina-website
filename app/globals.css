@@ -24,3 +24,45 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.hero-grid {
+  animation: hero-grid-drift 20s linear infinite;
+}
+
+.scroll-cue {
+  animation: scroll-cue 1.8s ease-in-out infinite;
+  transform-origin: top;
+}
+
+@keyframes hero-grid-drift {
+  to {
+    background-position: 80px 80px;
+  }
+}
+
+@keyframes scroll-cue {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scaleY(0.45);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hero-grid,
+  .scroll-cue {
+    animation: none;
+  }
+}

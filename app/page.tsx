@@ -1,10 +1,18 @@
 import Link from "next/link";
+import AnimatedStats, { type HomepageStat } from "@/components/AnimatedStats";
+import HomeEnhancements from "@/components/HomeEnhancements";
 
-const STATS = [
-  { value: "16,000+", label: "Members Worldwide" },
-  { value: "400+", label: "University Chapters" },
-  { value: "1971", label: "Year Founded" },
-  { value: "$1M+", label: "Scholarships Awarded" },
+const STATS: HomepageStat[] = [
+  { value: 16_000, suffix: "+", label: "Members Worldwide" },
+  { value: 400, suffix: "+", label: "University Chapters" },
+  { value: 1_971, label: "Year Founded" },
+  {
+    value: 1_000_000,
+    prefix: "$",
+    suffix: "+",
+    compact: true,
+    label: "Scholarships Awarded",
+  },
 ];
 
 const PILLARS = [
@@ -55,13 +63,14 @@ const EVENTS = [
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-white text-gray-900">
+      <HomeEnhancements />
 
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
       <section className="relative min-h-screen flex items-center bg-[#006B3C] overflow-hidden">
 
         {/* Hard grid overlay */}
         <div
-          className="absolute inset-0 opacity-[0.07]"
+          className="hero-grid absolute inset-0 opacity-[0.07]"
           style={{
             backgroundImage: `linear-gradient(rgba(255,255,255,1) 1px, transparent 1px),
                               linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)`,
@@ -111,14 +120,14 @@ export default function HomePage() {
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/membership"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#006B3C] font-bold text-sm tracking-wide hover:bg-gray-100 transition-colors"
+                className="inline-flex items-center gap-2 bg-white px-8 py-4 text-sm font-bold tracking-wide text-[#006B3C] transition-all hover:-translate-y-0.5 hover:bg-gray-100 hover:shadow-xl"
               >
                 Join the Chapter
                 <span aria-hidden>→</span>
               </Link>
               <Link
                 href="/about"
-                className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white font-semibold text-sm tracking-wide hover:border-white/60 hover:bg-white/5 transition-all"
+                className="inline-flex items-center gap-2 border border-white/30 px-8 py-4 text-sm font-semibold tracking-wide text-white transition-all hover:-translate-y-0.5 hover:border-white/60 hover:bg-white/5"
               >
                 Our Story
               </Link>
@@ -128,25 +137,17 @@ export default function HomePage() {
 
         {/* Hard bottom border */}
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-white opacity-10" />
+        <a
+          href="#impact"
+          className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-[0.65rem] font-bold uppercase tracking-[0.25em] text-white/50 transition-colors hover:text-white sm:flex"
+        >
+          Explore our impact
+          <span className="scroll-cue block h-8 w-px bg-white/50" aria-hidden="true" />
+        </a>
       </section>
 
       {/* ── STATS ────────────────────────────────────────────────────────── */}
-      <section className="bg-gray-950 py-0">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-y lg:divide-y-0 divide-white/10">
-            {STATS.map(({ value, label }) => (
-              <div key={label} className="px-10 py-12 text-center">
-                <div className="text-4xl sm:text-5xl font-black text-white mb-2">
-                  {value}
-                </div>
-                <div className="text-gray-500 text-xs font-bold tracking-[0.2em] uppercase">
-                  {label}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <AnimatedStats stats={STATS} />
 
       {/* ── ABOUT ────────────────────────────────────────────────────────── */}
       <section className="py-32 bg-white border-b border-gray-100">
@@ -254,8 +255,9 @@ export default function HomePage() {
 
           <div className="divide-y divide-gray-200 border-t border-b border-gray-200">
             {EVENTS.map((event) => (
-              <div
+              <Link
                 key={event.id}
+                href="/events"
                 className="flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-10 py-8 hover:bg-white transition-colors group cursor-pointer px-2"
               >
                 {/* Date block */}
@@ -280,7 +282,7 @@ export default function HomePage() {
                 <span className="text-gray-300 group-hover:text-[#006B3C] group-hover:translate-x-1 transition-all text-xl hidden sm:block">
                   →
                 </span>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
