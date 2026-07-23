@@ -120,14 +120,14 @@ export default function HomePage() {
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/membership"
-                className="inline-flex items-center gap-2 bg-white px-8 py-4 text-sm font-bold tracking-wide text-[#006B3C] transition-all hover:-translate-y-0.5 hover:bg-gray-100 hover:shadow-xl"
+                className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-bold tracking-wide text-[#006B3C] transition-all hover:-translate-y-0.5 hover:bg-gray-100 hover:shadow-xl"
               >
                 Join the Chapter
                 <span aria-hidden>→</span>
               </Link>
               <Link
                 href="/about"
-                className="inline-flex items-center gap-2 border border-white/30 px-8 py-4 text-sm font-semibold tracking-wide text-white transition-all hover:-translate-y-0.5 hover:border-white/60 hover:bg-white/5"
+                className="inline-flex items-center gap-2 rounded-full border border-white/30 px-8 py-4 text-sm font-semibold tracking-wide text-white transition-all hover:-translate-y-0.5 hover:border-white/60 hover:bg-white/5"
               >
                 Our Story
               </Link>
@@ -184,7 +184,7 @@ export default function HomePage() {
             {/* Photo placeholder */}
             <div className="relative">
               <div
-                className="aspect-[4/3] bg-gray-50 border-2 border-dashed border-gray-200 flex items-center justify-center"
+                className="flex aspect-[4/3] items-center justify-center rounded-2xl border-2 border-dashed border-gray-200 bg-gray-50"
               >
                 <div className="text-center">
                   <div className="w-16 h-16 bg-[#006B3C] mx-auto mb-4 flex items-center justify-center">
@@ -195,7 +195,7 @@ export default function HomePage() {
                 </div>
               </div>
               {/* Hard offset accent */}
-              <div className="absolute -bottom-3 -right-3 w-full h-full border-2 border-[#006B3C] opacity-20 -z-10" />
+              <div className="absolute -bottom-3 -right-3 -z-10 h-full w-full rounded-2xl border-2 border-[#006B3C] opacity-20" />
             </div>
           </div>
         </div>
@@ -253,15 +253,15 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="divide-y divide-gray-200 border-t border-b border-gray-200">
+          <div className="grid gap-4">
             {EVENTS.map((event) => (
               <Link
                 key={event.id}
                 href="/events"
-                className="flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-10 py-8 hover:bg-white transition-colors group cursor-pointer px-2"
+                className="group flex cursor-pointer flex-col gap-6 rounded-xl border border-gray-200 bg-white px-5 py-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#006B3C]/40 hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#006B3C] focus-visible:ring-offset-2 sm:flex-row sm:items-center sm:gap-10 sm:px-7"
               >
                 {/* Date block */}
-                <div className="shrink-0 w-16 bg-[#006B3C] text-center py-3">
+                <div className="w-16 shrink-0 rounded-lg bg-[#006B3C] py-3 text-center transition-transform duration-300 group-hover:scale-105">
                   <div className="text-white/60 text-xs font-bold tracking-widest uppercase">
                     {event.month}
                   </div>
@@ -271,15 +271,15 @@ export default function HomePage() {
                 {/* Info */}
                 <div className="flex-1 min-w-0">
                   <div className="flex flex-wrap items-center gap-3 mb-1">
-                    <h3 className="text-lg font-bold text-gray-900">{event.title}</h3>
-                    <span className="text-xs font-bold px-2 py-0.5 bg-green-50 text-[#006B3C] border border-green-200">
+                    <h3 className="text-lg font-bold text-gray-900 transition-colors group-hover:text-[#006B3C]">{event.title}</h3>
+                    <span className="rounded-full border border-green-200 bg-green-50 px-2.5 py-1 text-xs font-bold text-[#006B3C]">
                       {event.type}
                     </span>
                   </div>
                   <p className="text-gray-400 text-sm">{event.location}</p>
                 </div>
 
-                <span className="text-gray-300 group-hover:text-[#006B3C] group-hover:translate-x-1 transition-all text-xl hidden sm:block">
+                <span className="hidden h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-xl text-gray-400 transition-all duration-300 group-hover:translate-x-1 group-hover:bg-[#006B3C] group-hover:text-white sm:flex">
                   →
                 </span>
               </Link>
@@ -291,7 +291,7 @@ export default function HomePage() {
       {/* ── MEMBERSHIP CTA ───────────────────────────────────────────────── */}
       <section className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-[#006B3C] p-16 sm:p-20 relative overflow-hidden">
+          <div className="relative overflow-hidden rounded-3xl bg-[#006B3C] p-10 sm:p-16 lg:p-20">
 
             {/* Background watermark */}
             <span
@@ -317,14 +317,14 @@ export default function HomePage() {
               <div className="flex flex-wrap gap-4">
                 <Link
                   href="/membership"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#006B3C] font-bold text-sm tracking-wide hover:bg-gray-100 transition-colors"
+                  className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-bold tracking-wide text-[#006B3C] transition-all hover:-translate-y-0.5 hover:bg-gray-100 hover:shadow-xl"
                 >
                   Become a Member
                   <span aria-hidden>→</span>
                 </Link>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center px-8 py-4 border border-white/30 text-white font-semibold text-sm tracking-wide hover:border-white/60 hover:bg-white/5 transition-all"
+                  className="inline-flex items-center rounded-full border border-white/30 px-8 py-4 text-sm font-semibold tracking-wide text-white transition-all hover:-translate-y-0.5 hover:border-white/60 hover:bg-white/5"
                 >
                   Get in Touch
                 </Link>
@@ -354,7 +354,7 @@ export default function HomePage() {
               </p>
               <Link
                 href="/sponsors"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-[#006B3C] text-white font-bold text-sm tracking-wide hover:bg-[#005530] transition-colors"
+                className="inline-flex items-center gap-2 rounded-full bg-[#006B3C] px-8 py-4 text-sm font-bold tracking-wide text-white transition-all hover:-translate-y-0.5 hover:bg-[#005530] hover:shadow-lg"
               >
                 Become a Sponsor
                 <span aria-hidden>→</span>
@@ -369,7 +369,7 @@ export default function HomePage() {
                 {Array.from({ length: 6 }).map((_, i) => (
                   <div
                     key={i}
-                    className="aspect-video bg-white border-2 border-dashed border-gray-200 flex items-center justify-center"
+                    className="flex aspect-video items-center justify-center rounded-xl border-2 border-dashed border-gray-200 bg-white transition-all hover:-translate-y-0.5 hover:border-[#006B3C]/30 hover:shadow-md"
                   >
                     <span className="text-gray-300 text-xs font-bold tracking-widest">LOGO</span>
                   </div>
