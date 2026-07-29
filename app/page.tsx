@@ -1,6 +1,21 @@
 import Link from "next/link";
+import Image from "next/image";
 import AnimatedStats, { type HomepageStat } from "@/components/AnimatedStats";
+import BrandMark from "@/components/BrandMark";
+import FeaturedEventCarousel from "@/components/FeaturedEventCarousel";
 import HomeEnhancements from "@/components/HomeEnhancements";
+
+const SOCIAL_LINKS = [
+  { label: "Discord", href: "https://discord.gg/fSpF2wZqDc" },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/nsbeuregina?igsh=MXc5c3dlcGx3ZWdxOQ==",
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/company/nsbe-uregina/",
+  },
+];
 
 const STATS: HomepageStat[] = [
   { value: 16_000, suffix: "+", label: "Members Worldwide" },
@@ -181,17 +196,17 @@ export default function HomePage() {
               </Link>
             </div>
 
-            {/* Photo placeholder */}
             <div className="relative">
-              <div
-                className="flex aspect-[4/3] items-center justify-center rounded-2xl border-2 border-dashed border-gray-200 bg-gray-50"
-              >
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-[#006B3C] mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-white font-black text-xl">N</span>
-                  </div>
-                  <p className="text-gray-400 text-sm font-medium">Chapter photo goes here</p>
-                  <p className="text-gray-300 text-xs mt-1">Recommended: 800×600px</p>
+              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-gray-100 shadow-xl">
+                <Image
+                  src="/media/homepage/chapter-group.jpg"
+                  alt="The NSBE University of Regina executive team seated together in a lecture hall"
+                  fill
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  className="object-cover object-center"
+                />
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent px-6 pb-5 pt-16">
+                  <p className="text-sm font-semibold text-white">NSBE URegina executive team</p>
                 </div>
               </div>
               {/* Hard offset accent */}
@@ -251,6 +266,38 @@ export default function HomePage() {
               <span>All events</span>
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </Link>
+          </div>
+
+          <div className="mb-12 grid overflow-hidden rounded-3xl bg-gray-950 shadow-2xl lg:grid-cols-[1.35fr_0.85fr]">
+            <FeaturedEventCarousel />
+            <div className="flex flex-col justify-center p-8 sm:p-12">
+              <p className="text-xs font-bold uppercase tracking-[0.25em] text-green-400">
+                Featured event
+              </p>
+              <h3 className="mt-5 text-3xl font-black tracking-tight text-white sm:text-4xl">
+                Fall Kickoff &amp; Mixer
+              </h3>
+              <p className="mt-5 leading-relaxed text-white/60">
+                Meet the chapter, connect with engineering students, and learn what NSBE
+                URegina has planned for the year ahead.
+              </p>
+              <dl className="mt-8 grid grid-cols-2 gap-6 border-y border-white/10 py-6">
+                <div>
+                  <dt className="text-xs font-bold uppercase tracking-widest text-white/35">Date</dt>
+                  <dd className="mt-2 font-bold text-white">August 12</dd>
+                </div>
+                <div>
+                  <dt className="text-xs font-bold uppercase tracking-widest text-white/35">Location</dt>
+                  <dd className="mt-2 font-bold text-white">EDC Atrium</dd>
+                </div>
+              </dl>
+              <Link
+                href="/events"
+                className="mt-8 inline-flex w-fit items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-bold text-[#006B3C] transition-all hover:-translate-y-0.5 hover:shadow-lg"
+              >
+                View event details <span aria-hidden>→</span>
+              </Link>
+            </div>
           </div>
 
           <div className="grid gap-4">
@@ -384,9 +431,12 @@ export default function HomePage() {
       <footer className="bg-gray-950 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-8 pb-10 border-b border-white/10">
-            <div>
-              <span className="font-black text-white text-2xl tracking-tight">NSBE</span>
-              <span className="text-white/30 ml-3 text-sm">University of Regina</span>
+            <div className="flex items-center gap-3">
+              <BrandMark size={52} />
+              <div>
+                <span className="block text-2xl font-black tracking-tight text-white">NSBE</span>
+                <span className="text-sm text-white/35">University of Regina</span>
+              </div>
             </div>
             <div className="flex flex-wrap gap-8">
               {["About", "Events", "Membership", "Sponsors", "Contact"].map((l) => (
@@ -397,6 +447,22 @@ export default function HomePage() {
                 >
                   {l}
                 </Link>
+              ))}
+            </div>
+          </div>
+          <div className="flex flex-col gap-5 border-b border-white/10 py-8 sm:flex-row sm:items-center sm:justify-between">
+            <p className="text-sm font-medium text-white/50">Connect with the chapter</p>
+            <div className="flex flex-wrap gap-3">
+              {SOCIAL_LINKS.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-sm font-semibold text-white/70 transition-all hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/10 hover:text-white"
+                >
+                  {social.label} <span aria-hidden>↗</span>
+                </a>
               ))}
             </div>
           </div>

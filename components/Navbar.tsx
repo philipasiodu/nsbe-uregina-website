@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import BrandMark from "@/components/BrandMark";
 
 const NAV_LINKS = [
   { label: "Home", href: "/" },
@@ -42,9 +42,7 @@ export default function Navbar() {
             onClick={closeMenu}
             className="flex items-center gap-3 min-w-0 shrink-0"
           >
-            <div className="w-9 h-9 rounded-full bg-[#006B3C] flex items-center justify-center shrink-0">
-              <span className="text-white font-bold text-sm tracking-wide">N</span>
-            </div>
+            <BrandMark size={40} />
             <span className="font-semibold text-[#006B3C] text-base leading-tight whitespace-nowrap">
               NSBE <span className="hidden sm:inline text-gray-600 font-normal">| UofR Chapter</span>
             </span>
