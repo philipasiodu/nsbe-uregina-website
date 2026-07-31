@@ -18,13 +18,18 @@ export const metadata: Metadata = {
   description: "National Society of Black Engineers — University of Regina Chapter",
 };
 
+const themeScript = `(function(){try{var saved=localStorage.getItem("nsbe-theme");var dark=saved==="dark"||(!saved&&window.matchMedia("(prefers-color-scheme: dark)").matches);document.documentElement.dataset.theme=dark?"dark":"light"}catch(error){}})()`;
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="light" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Navbar />
         <main className="pt-16">{children}</main>

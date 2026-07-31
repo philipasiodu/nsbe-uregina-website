@@ -48,6 +48,38 @@ const PILLARS = [
   },
 ];
 
+const ENGAGEMENT_PATHS = [
+  {
+    eyebrow: "Belong",
+    title: "Join the chapter",
+    body: "Find mentorship, community, and opportunities built for your journey.",
+    href: "/membership",
+    accent: "bg-[#006B3C] text-white",
+  },
+  {
+    eyebrow: "Grow",
+    title: "Career resources",
+    body: "Explore resume guidance, scholarships, internships, and workshops.",
+    href: "/resources",
+    accent: "bg-amber-300 text-gray-950",
+  },
+  {
+    eyebrow: "Connect",
+    title: "Meet us on Discord",
+    body: "Join the conversation and hear about chapter updates as they happen.",
+    href: "https://discord.gg/fSpF2wZqDc",
+    accent: "bg-gray-950 text-white dark:bg-white dark:text-gray-950",
+    external: true,
+  },
+  {
+    eyebrow: "Invest",
+    title: "Partner with NSBE",
+    body: "Help expand access, programming, and career pathways for our members.",
+    href: "/sponsors",
+    accent: "bg-white text-gray-950 dark:bg-[#17251e] dark:text-white",
+  },
+];
+
 const EVENTS = [
   {
     id: 1,
@@ -77,7 +109,7 @@ const EVENTS = [
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-white text-gray-900">
+    <div className="min-h-screen bg-white text-gray-900 dark:bg-[#07110d] dark:text-gray-100">
       <HomeEnhancements />
 
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
@@ -165,7 +197,7 @@ export default function HomePage() {
       <AnimatedStats stats={STATS} />
 
       {/* ── ABOUT ────────────────────────────────────────────────────────── */}
-      <section className="py-32 bg-white border-b border-gray-100">
+      <section className="border-b border-gray-100 bg-white py-24 dark:border-white/10 dark:bg-[#07110d]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
 
@@ -173,17 +205,17 @@ export default function HomePage() {
               <p className="text-[#006B3C] text-xs font-bold tracking-[0.25em] uppercase mb-6">
                 Who We Are
               </p>
-              <h2 className="text-4xl sm:text-5xl font-black text-gray-900 leading-tight mb-6 tracking-tight">
+              <h2 className="text-4xl sm:text-5xl font-black text-gray-900 leading-tight mb-6 tracking-tight dark:text-white">
                 A chapter built
                 <br />on purpose.
               </h2>
               <div className="w-12 h-1 bg-[#006B3C] mb-8" />
-              <p className="text-gray-500 text-lg leading-relaxed mb-6">
+              <p className="text-gray-500 text-lg leading-relaxed mb-6 dark:text-gray-300">
                 NSBE UofR is part of one of the largest student-run technical organizations
                 in the world. On campus, we close the gap between Black engineering students
                 and the opportunities they deserve.
               </p>
-              <p className="text-gray-500 text-lg leading-relaxed mb-10">
+              <p className="text-gray-500 text-lg leading-relaxed mb-10 dark:text-gray-300">
                 First year finding your footing, or final year heading into industry —
                 this chapter is your foundation.
               </p>
@@ -216,10 +248,58 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── PATHWAYS ─────────────────────────────────────────────────────── */}
+      <section className="border-b border-gray-200 bg-[#edf6f1] py-20 dark:border-white/10 dark:bg-[#0b1712]">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-12 flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="mb-4 text-xs font-bold uppercase tracking-[0.25em] text-[#006B3C] dark:text-green-400">
+                Find your place
+              </p>
+              <h2 className="max-w-2xl text-3xl font-black tracking-tight text-gray-900 sm:text-4xl dark:text-white">
+                Start wherever you are.
+              </h2>
+            </div>
+            <p className="max-w-md text-sm leading-relaxed text-gray-500 dark:text-gray-300">
+              Whether you want community, career support, or a way to give back, there is
+              a clear next step waiting for you.
+            </p>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {ENGAGEMENT_PATHS.map((path, index) => (
+              <Link
+                key={path.title}
+                href={path.href}
+                target={path.external ? "_blank" : undefined}
+                rel={path.external ? "noreferrer" : undefined}
+                className={`group flex min-h-64 flex-col justify-between overflow-hidden rounded-2xl p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${path.accent}`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <span className="text-xs font-bold uppercase tracking-[0.22em] opacity-60">
+                    {path.eyebrow}
+                  </span>
+                  <span className="flex h-9 w-9 items-center justify-center rounded-full border border-current/20 text-lg transition-transform duration-300 group-hover:translate-x-1">
+                    {path.external ? "↗" : "→"}
+                  </span>
+                </div>
+                <div>
+                  <span className="mb-5 block text-5xl font-black opacity-10" aria-hidden="true">
+                    0{index + 1}
+                  </span>
+                  <h3 className="text-xl font-black tracking-tight">{path.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed opacity-65">{path.body}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── PILLARS ──────────────────────────────────────────────────────── */}
-      <section className="py-32 bg-[#006B3C]">
+      <section className="py-24 bg-[#006B3C]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-20">
+          <div className="mb-14">
             <p className="text-white/40 text-xs font-bold tracking-[0.25em] uppercase mb-6">
               What We Do
             </p>
@@ -247,14 +327,14 @@ export default function HomePage() {
       </section>
 
       {/* ── EVENTS ───────────────────────────────────────────────────────── */}
-      <section className="py-32 bg-gray-50">
+      <section className="bg-gray-50 py-24 dark:bg-[#0b1712]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-16">
             <div>
               <p className="text-[#006B3C] text-xs font-bold tracking-[0.25em] uppercase mb-6">
                 Upcoming
               </p>
-              <h2 className="text-4xl sm:text-5xl font-black text-gray-900 leading-tight tracking-tight">
+              <h2 className="text-4xl sm:text-5xl font-black text-gray-900 leading-tight tracking-tight dark:text-white">
                 Events &
                 <br />highlights.
               </h2>
@@ -305,7 +385,7 @@ export default function HomePage() {
               <Link
                 key={event.id}
                 href="/events"
-                className="group flex cursor-pointer flex-col gap-6 rounded-xl border border-gray-200 bg-white px-5 py-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#006B3C]/40 hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#006B3C] focus-visible:ring-offset-2 sm:flex-row sm:items-center sm:gap-10 sm:px-7"
+                className="group flex cursor-pointer flex-col gap-6 rounded-xl border border-gray-200 bg-white px-5 py-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#006B3C]/40 hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#006B3C] focus-visible:ring-offset-2 sm:flex-row sm:items-center sm:gap-10 sm:px-7 dark:border-white/10 dark:bg-[#122019] dark:focus-visible:ring-offset-[#0b1712]"
               >
                 {/* Date block */}
                 <div className="w-16 shrink-0 rounded-lg bg-[#006B3C] py-3 text-center transition-transform duration-300 group-hover:scale-105">
@@ -318,15 +398,15 @@ export default function HomePage() {
                 {/* Info */}
                 <div className="flex-1 min-w-0">
                   <div className="flex flex-wrap items-center gap-3 mb-1">
-                    <h3 className="text-lg font-bold text-gray-900 transition-colors group-hover:text-[#006B3C]">{event.title}</h3>
-                    <span className="rounded-full border border-green-200 bg-green-50 px-2.5 py-1 text-xs font-bold text-[#006B3C]">
+                    <h3 className="text-lg font-bold text-gray-900 transition-colors group-hover:text-[#006B3C] dark:text-white dark:group-hover:text-green-300">{event.title}</h3>
+                    <span className="rounded-full border border-green-200 bg-green-50 px-2.5 py-1 text-xs font-bold text-[#006B3C] dark:border-green-400/20 dark:bg-green-400/10 dark:text-green-300">
                       {event.type}
                     </span>
                   </div>
-                  <p className="text-gray-400 text-sm">{event.location}</p>
+                  <p className="text-gray-400 text-sm dark:text-gray-400">{event.location}</p>
                 </div>
 
-                <span className="hidden h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-xl text-gray-400 transition-all duration-300 group-hover:translate-x-1 group-hover:bg-[#006B3C] group-hover:text-white sm:flex">
+                <span className="hidden h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-xl text-gray-400 transition-all duration-300 group-hover:translate-x-1 group-hover:bg-[#006B3C] group-hover:text-white sm:flex dark:bg-white/10">
                   →
                 </span>
               </Link>
@@ -336,7 +416,7 @@ export default function HomePage() {
       </section>
 
       {/* ── MEMBERSHIP CTA ───────────────────────────────────────────────── */}
-      <section className="py-32 bg-white">
+      <section className="bg-white py-24 dark:bg-[#07110d]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative overflow-hidden rounded-3xl bg-[#006B3C] p-10 sm:p-16 lg:p-20">
 
@@ -382,19 +462,19 @@ export default function HomePage() {
       </section>
 
       {/* ── SPONSORS ─────────────────────────────────────────────────────── */}
-      <section className="py-32 bg-gray-50 border-t border-gray-200">
+      <section className="border-t border-gray-200 bg-gray-50 py-24 dark:border-white/10 dark:bg-[#0b1712]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div>
               <p className="text-[#006B3C] text-xs font-bold tracking-[0.25em] uppercase mb-6">
                 Partners & Sponsors
               </p>
-              <h2 className="text-4xl sm:text-5xl font-black text-gray-900 leading-tight tracking-tight mb-6">
+              <h2 className="text-4xl sm:text-5xl font-black text-gray-900 leading-tight tracking-tight mb-6 dark:text-white">
                 Invest in the
                 <br />next generation.
               </h2>
               <div className="w-12 h-1 bg-[#006B3C] mb-8" />
-              <p className="text-gray-500 text-lg leading-relaxed mb-10">
+              <p className="text-gray-500 text-lg leading-relaxed mb-10 dark:text-gray-300">
                 Partner with NSBE UofR to connect your organization with driven Black
                 engineering students. Your support funds the events, travel, and programming
                 that shape careers.
@@ -416,7 +496,7 @@ export default function HomePage() {
                 {Array.from({ length: 6 }).map((_, i) => (
                   <div
                     key={i}
-                    className="flex aspect-video items-center justify-center rounded-xl border-2 border-dashed border-gray-200 bg-white transition-all hover:-translate-y-0.5 hover:border-[#006B3C]/30 hover:shadow-md"
+                    className="flex aspect-video items-center justify-center rounded-xl border-2 border-dashed border-gray-200 bg-white transition-all hover:-translate-y-0.5 hover:border-[#006B3C]/30 hover:shadow-md dark:border-white/10 dark:bg-[#122019]"
                   >
                     <span className="text-gray-300 text-xs font-bold tracking-widest">LOGO</span>
                   </div>

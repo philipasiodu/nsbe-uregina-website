@@ -43,7 +43,7 @@ export default function HomeEnhancements() {
       />
 
       <div
-        className={`fixed bottom-5 left-1/2 z-40 flex -translate-x-1/2 items-center gap-1 rounded-full border border-gray-200 bg-white/95 p-1.5 shadow-xl backdrop-blur transition-all duration-300 md:hidden ${
+        className={`fixed bottom-5 left-1/2 z-40 flex -translate-x-1/2 items-center gap-1 rounded-full border border-gray-200 bg-white/95 p-1.5 shadow-xl backdrop-blur transition-all duration-300 md:hidden dark:border-white/10 dark:bg-gray-950/95 ${
           actionsVisible
             ? "translate-y-0 opacity-100"
             : "pointer-events-none translate-y-6 opacity-0"
@@ -58,7 +58,7 @@ export default function HomeEnhancements() {
         </Link>
         <Link
           href="/events"
-          className="rounded-full px-5 py-2.5 text-sm font-bold text-gray-700 hover:bg-gray-100"
+          className="rounded-full px-5 py-2.5 text-sm font-bold text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-white/10"
         >
           Events
         </Link>
@@ -80,7 +80,7 @@ export default function HomeEnhancements() {
         </Link>
         <Link
           href="/sponsors"
-          className="rounded-full border border-gray-200 bg-white px-5 py-3 text-sm font-bold text-gray-800 shadow-lg transition-transform hover:-translate-y-0.5 hover:border-[#006B3C] hover:text-[#006B3C]"
+          className="rounded-full border border-gray-200 bg-white px-5 py-3 text-sm font-bold text-gray-800 shadow-lg transition-transform hover:-translate-y-0.5 hover:border-[#006B3C] hover:text-[#006B3C] dark:border-white/10 dark:bg-gray-950 dark:text-gray-100 dark:hover:border-green-400 dark:hover:text-green-300"
         >
           Become a sponsor
         </Link>
