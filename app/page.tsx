@@ -1,21 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import AnimatedStats, { type HomepageStat } from "@/components/AnimatedStats";
-import BrandMark from "@/components/BrandMark";
 import FeaturedEventCarousel from "@/components/FeaturedEventCarousel";
 import HomeEnhancements from "@/components/HomeEnhancements";
-
-const SOCIAL_LINKS = [
-  { label: "Discord", href: "https://discord.gg/fSpF2wZqDc" },
-  {
-    label: "Instagram",
-    href: "https://www.instagram.com/nsbeuregina?igsh=MXc5c3dlcGx3ZWdxOQ==",
-  },
-  {
-    label: "LinkedIn",
-    href: "https://www.linkedin.com/company/nsbe-uregina/",
-  },
-];
 
 const STATS: HomepageStat[] = [
   { value: 16_000, suffix: "+", label: "Members Worldwide" },
@@ -506,56 +493,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* ── FOOTER ───────────────────────────────────────────────────────── */}
-      <footer className="bg-gray-950 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-8 pb-10 border-b border-white/10">
-            <div className="flex items-center gap-3">
-              <BrandMark size={52} />
-              <div>
-                <span className="block text-2xl font-black tracking-tight text-white">NSBE</span>
-                <span className="text-sm text-white/35">University of Regina</span>
-              </div>
-            </div>
-            <div className="flex flex-wrap gap-8">
-              {["About", "Events", "Membership", "Sponsors", "Contact"].map((l) => (
-                <Link
-                  key={l}
-                  href={`/${l.toLowerCase()}`}
-                  className="text-white/40 text-sm font-medium hover:text-white transition-colors tracking-wide"
-                >
-                  {l}
-                </Link>
-              ))}
-            </div>
-          </div>
-          <div className="flex flex-col gap-5 border-b border-white/10 py-8 sm:flex-row sm:items-center sm:justify-between">
-            <p className="text-sm font-medium text-white/50">Connect with the chapter</p>
-            <div className="flex flex-wrap gap-3">
-              {SOCIAL_LINKS.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-sm font-semibold text-white/70 transition-all hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/10 hover:text-white"
-                >
-                  {social.label} <span aria-hidden>↗</span>
-                </a>
-              ))}
-            </div>
-          </div>
-          <div className="pt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-            <p className="text-white/20 text-xs tracking-wide">
-              © {new Date().getFullYear()} NSBE University of Regina Chapter. All rights reserved.
-            </p>
-            <p className="text-white/20 text-xs">
-              National Society of Black Engineers
-            </p>
-          </div>
-        </div>
-      </footer>
 
     </div>
   );

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import BrandMark from "@/components/BrandMark";
 import ThemeToggle from "@/components/ThemeToggle";
 
@@ -13,10 +14,12 @@ const NAV_LINKS = [
   { label: "Membership", href: "/membership" },
   { label: "Sponsors", href: "/sponsors" },
   { label: "Resources", href: "/resources" },
+  { label: "Gallery", href: "/gallery" },
   { label: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -50,12 +53,13 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav Links */}
-          <ul className="hidden lg:flex items-center gap-1">
+          <ul className="hidden xl:flex items-center gap-0.5">
             {NAV_LINKS.map(({ label, href }) => (
               <li key={href}>
                 <Link
                   href={href}
-                  className="px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:text-[#006B3C] hover:bg-green-50 transition-colors duration-150 dark:text-gray-200 dark:hover:bg-white/10 dark:hover:text-green-300"
+                  aria-current={pathname === href ? "page" : undefined}
+                  className={`rounded-md px-2.5 py-2 text-sm font-medium transition-colors duration-150 ${pathname === href ? "bg-green-50 text-[#006B3C] dark:bg-white/10 dark:text-green-300" : "text-gray-700 hover:bg-green-50 hover:text-[#006B3C] dark:text-gray-200 dark:hover:bg-white/10 dark:hover:text-green-300"}`}
                 >
                   {label}
                 </Link>
@@ -77,7 +81,7 @@ export default function Navbar() {
               onClick={() => setMenuOpen((prev) => !prev)}
               aria-label={menuOpen ? "Close menu" : "Open menu"}
               aria-expanded={menuOpen}
-              className="lg:hidden flex flex-col justify-center items-center w-9 h-9 rounded-md hover:bg-green-50 transition-colors dark:hover:bg-white/10"
+              className="xl:hidden flex flex-col justify-center items-center w-9 h-9 rounded-md hover:bg-green-50 transition-colors dark:hover:bg-white/10"
             >
               <span className={`block w-5 h-0.5 bg-gray-700 transition-transform duration-300 dark:bg-gray-200 ${menuOpen ? "translate-y-1.5 rotate-45" : ""}`} />
               <span className={`block w-5 h-0.5 bg-gray-700 mt-1 transition-opacity duration-300 dark:bg-gray-200 ${menuOpen ? "opacity-0" : ""}`} />
@@ -89,7 +93,7 @@ export default function Navbar() {
 
       {/* Mobile Dropdown */}
       <div
-        className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+        className={`xl:hidden overflow-hidden transition-all duration-300 ease-in-out ${
           menuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
         }`}
       >
@@ -100,7 +104,8 @@ export default function Navbar() {
                 <Link
                   href={href}
                   onClick={closeMenu}
-                  className="block px-3 py-2.5 text-sm font-medium text-gray-700 rounded-md hover:text-[#006B3C] hover:bg-green-50 transition-colors duration-150 dark:text-gray-200 dark:hover:bg-white/10 dark:hover:text-green-300"
+                  aria-current={pathname === href ? "page" : undefined}
+                  className={`block rounded-md px-3 py-2.5 text-sm font-medium transition-colors duration-150 ${pathname === href ? "bg-green-50 text-[#006B3C] dark:bg-white/10 dark:text-green-300" : "text-gray-700 hover:bg-green-50 hover:text-[#006B3C] dark:text-gray-200 dark:hover:bg-white/10 dark:hover:text-green-300"}`}
                 >
                   {label}
                 </Link>
