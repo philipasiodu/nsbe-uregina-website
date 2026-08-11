@@ -68,6 +68,65 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <section id="chapter-in-motion" className="scroll-mt-20 overflow-hidden bg-[#101b16] py-24 text-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.25em] text-green-300">Chapter in motion</p>
+              <h2 className="mt-4 max-w-2xl text-4xl font-black tracking-tight sm:text-5xl">The mission lives in the moments between meetings.</h2>
+            </div>
+            <p className="max-w-md leading-relaxed text-white/65">Showing up, sharing ideas, representing our community, and making room for new connections across campus.</p>
+          </div>
+
+          <div className="mt-12 grid gap-5 lg:grid-cols-12">
+            <figure className="group relative aspect-[4/3] overflow-hidden rounded-2xl lg:col-span-7 lg:row-span-2">
+              <Image
+                src="/media/about/chapter-connection.jpg"
+                alt="NSBE URegina members welcoming students at a busy campus gathering"
+                fill
+                sizes="(min-width: 1024px) 58vw, 100vw"
+                className="object-cover transition-transform duration-700 group-hover:scale-[1.025]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/5 to-transparent" />
+              <figcaption className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
+                <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#F4C430]">Connection</p>
+                <p className="mt-2 max-w-lg text-xl font-bold">Creating welcoming spaces where students can meet the chapter and one another.</p>
+              </figcaption>
+            </figure>
+
+            <figure className="group relative aspect-[16/10] overflow-hidden rounded-2xl lg:col-span-5">
+              <Image
+                src="/media/about/chapter-belonging.jpg"
+                alt="An NSBE URegina student speaking at a University of Regina podium"
+                fill
+                sizes="(min-width: 1024px) 42vw, 100vw"
+                className="object-cover transition-transform duration-700 group-hover:scale-[1.025]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent" />
+              <figcaption className="absolute inset-x-0 bottom-0 p-6">
+                <p className="text-xs font-bold uppercase tracking-[0.22em] text-green-300">Student voice</p>
+                <p className="mt-2 text-lg font-bold">Representing our community across campus.</p>
+              </figcaption>
+            </figure>
+
+            <figure className="group relative aspect-[16/10] overflow-hidden rounded-2xl lg:col-span-5">
+              <Image
+                src="/media/about/chapter-community.jpg"
+                alt="NSBE URegina members talking and laughing together at a chapter event"
+                fill
+                sizes="(min-width: 1024px) 42vw, 100vw"
+                className="object-cover object-center transition-transform duration-700 group-hover:scale-[1.025]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent" />
+              <figcaption className="absolute inset-x-0 bottom-0 p-6">
+                <p className="text-xs font-bold uppercase tracking-[0.22em] text-green-300">Belonging</p>
+                <p className="mt-2 text-lg font-bold">Building relationships that extend beyond the classroom.</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-white py-24 dark:bg-[#07110d]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-[0.72fr_1.28fr] lg:items-start">
