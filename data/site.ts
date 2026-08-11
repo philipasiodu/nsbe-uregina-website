@@ -8,19 +8,19 @@ export const socialLinks = [
 ];
 
 export const executives = [
-  { role: "President", name: "Executive name", program: "Program & year", email: "Email placeholder" },
-  { role: "Vice President", name: "Executive name", program: "Program & year", email: "Email placeholder" },
-  { role: "Treasurer", name: "Executive name", program: "Program & year", email: "Email placeholder" },
-  { role: "Secretary", name: "Executive name", program: "Program & year", email: "Email placeholder" },
-  { role: "Programs Chair", name: "Executive name", program: "Program & year", email: "Email placeholder" },
-  { role: "Academic Excellence Chair", name: "Executive name", program: "Program & year", email: "Email placeholder" },
-  { role: "Professional Development Chair", name: "Executive name", program: "Program & year", email: "Email placeholder" },
-  { role: "Membership Chair", name: "Executive name", program: "Program & year", email: "Email placeholder" },
-  { role: "Communications Chair", name: "Executive name", program: "Program & year", email: "Email placeholder" },
-  { role: "Events Chair", name: "Executive name", program: "Program & year", email: "Email placeholder" },
-  { role: "Sponsorship Chair", name: "Executive name", program: "Program & year", email: "Email placeholder" },
-  { role: "Community Outreach Chair", name: "Executive name", program: "Program & year", email: "Email placeholder" },
-  { role: "First-Year Representative", name: "Executive name", program: "Program & year", email: "Email placeholder" },
+  { role: "President", name: "Godwill", program: "Electrical/Electronics Engineering", image: "/media/executives/godwill.jpg" },
+  { role: "Vice President, Finance", name: "Nathan", program: "Software Engineering", image: "/media/executives/nathan.jpg" },
+  { role: "Vice President, University Affairs", name: "Grace", program: "Energy Systems Engineering", image: "/media/executives/grace.jpg" },
+  { role: "Vice President, External", name: "Eric", program: "Data Science", image: "/media/executives/eric.jpg" },
+  { role: "Vice President, Events", name: "Gianna", program: "Electrical/Electronics Engineering", image: "/media/executives/gianna.jpg" },
+  { role: "Vice President, Marketing", name: "Rugie", program: "Electrical/Electronics Engineering", image: "/media/executives/rugie.jpg" },
+  { role: "Policy Director", name: "Damola", program: "Energy Systems Engineering", image: "/media/executives/damola.jpg" },
+  { role: "Sponsorship Director", name: "Prisca", program: "Electrical/Electronics Engineering", image: "/media/executives/prisca.jpg" },
+  { role: "Secretary", name: "Chayil", program: "Electrical/Electronics Engineering", image: "/media/executives/chayil.jpg" },
+  { role: "Technical Director", name: "Philip", program: "Software Engineering", image: "/media/executives/philip.jpg" },
+  { role: "Faculty of Nursing Representative", name: "David", program: "Nursing", image: "/media/executives/david.jpg" },
+  { role: "Faculty of Engineering Representative", name: "Damilola", program: "Energy Systems Engineering", image: "/media/executives/damilola.jpg" },
+  { role: "First-Year Representative", name: "Fareed", program: "Electrical/Electronics Engineering", image: "/media/executives/fareed.jpg" },
 ];
 
 export type ChapterEvent = {

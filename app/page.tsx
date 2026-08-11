@@ -7,7 +7,7 @@ import HomeEnhancements from "@/components/HomeEnhancements";
 const STATS: HomepageStat[] = [
   { value: 16_000, suffix: "+", label: "Members Worldwide" },
   { value: 400, suffix: "+", label: "University Chapters" },
-  { value: 1_971, label: "Year Founded" },
+  { value: 1_971, label: "NSBE Roots" },
   {
     value: 1_000_000,
     prefix: "$",
@@ -132,7 +132,7 @@ export default function HomePage() {
           <div className="max-w-4xl">
 
             <p className="text-white/50 text-xs font-bold tracking-[0.3em] uppercase mb-8">
-              University of Regina Chapter &nbsp;·&nbsp; Est. 2018
+              Student-led &nbsp;·&nbsp; University of Regina Chapter
             </p>
 
             <h1

@@ -9,23 +9,22 @@ This checklist covers the placeholder content that still needs to be supplied be
 - [ ] One square chapter logo for the favicon and social profiles
 - [ ] One 1200 × 630 px social sharing image for Open Graph/LinkedIn previews
 
-## Executive team — 13 people
+## Executive team — complete
 
-For each executive:
-
-- [ ] Full name
-- [ ] Confirmed role title
-- [ ] Program and year of study
-- [ ] Professional headshot (same crop/orientation for all 13; portrait or square preferred)
-- [ ] Chapter email or approved contact method
-- [ ] Optional LinkedIn profile URL
+- [x] Names and role titles for all 13 executives
+- [x] Academic programs for all 13 executives
+- [x] Headshots for all 13 executives
+- [x] Individual contact fields removed by chapter decision
+- [x] Individual LinkedIn fields omitted by chapter decision
 
 ## About page
 
 - [ ] Founding year and short chapter history
 - [ ] Names of founding executives, if available
 - [ ] Historical/founding-team photo
-- [ ] Confirmation of the current mission and value statements
+- [x] NSBE national mission, vision, history, and scale verified through official NSBE sources
+
+The chapter founding year, founding executives, and historical photo were not found in a credible public source, so they are intentionally not stated on the site.
 
 ## Events
 
