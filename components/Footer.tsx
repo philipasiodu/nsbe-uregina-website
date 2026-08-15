@@ -1,6 +1,6 @@
 import Link from "next/link";
 import BrandMark from "@/components/BrandMark";
-import { socialLinks } from "@/data/site";
+import { chapterLinks, socialLinks } from "@/data/site";
 
 const footerLinks = [
   { label: "About", href: "/about" },
@@ -21,6 +21,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-3"><BrandMark size={52} /><div><span className="block text-2xl font-black tracking-tight">NSBE</span><span className="text-sm text-white/35">University of Regina</span></div></div>
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-white/45">Building community, academic excellence, professional growth, and leadership for Black students in STEM.</p>
+            <a href={chapterLinks.emailHref} className="mt-4 inline-block text-sm font-semibold text-white/65 transition-colors hover:text-white">{chapterLinks.email}</a>
           </div>
           <nav aria-label="Footer navigation" className="grid grid-cols-2 gap-x-8 gap-y-4 sm:grid-cols-4">{footerLinks.map((link) => <Link key={link.href} href={link.href} className="text-sm font-medium text-white/50 transition-colors hover:text-white">{link.label}</Link>)}</nav>
         </div>

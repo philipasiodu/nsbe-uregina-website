@@ -7,6 +7,15 @@ export const socialLinks = [
   { label: "LinkedIn", href: "https://www.linkedin.com/company/nsbe-uregina/" },
 ];
 
+export const chapterLinks = {
+  email: "nsbeuregina@gmail.com",
+  emailHref: "mailto:nsbeuregina@gmail.com",
+  executiveApplication:
+    "https://docs.google.com/forms/d/e/1FAIpQLScO5gEwyBOiJJwHnFny_fdo8nVEZkAOefbVONGghurtXFaFvQ/viewform",
+  membershipApplication:
+    "https://docs.google.com/forms/d/e/1FAIpQLScIXXGYmp4fluEB8RTMfPeXFnh_ppuvYuinD1Svw1oUxgjpuA/viewform",
+};
+
 export const executives = [
   { role: "President", name: "Godwill", program: "Electrical/Electronics Engineering", image: "/media/executives/godwill.jpg" },
   { role: "Vice President, Finance", name: "Nathan", program: "Software Engineering", image: "/media/executives/nathan.jpg" },

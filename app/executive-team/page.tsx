@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import SectionHeading from "@/components/SectionHeading";
-import { executives, socialLinks } from "@/data/site";
+import { chapterLinks, executives } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Executive Team",
@@ -11,8 +11,6 @@ export const metadata: Metadata = {
 };
 
 export default function ExecutiveTeamPage() {
-  const discord = socialLinks.find((link) => link.label === "Discord")?.href ?? "/membership";
-
   return (
     <>
       <PageHero
@@ -30,9 +28,7 @@ export default function ExecutiveTeamPage() {
               title="Student leadership in action."
               description="Our executive team brings together students from engineering, data science, and nursing to serve the chapter and strengthen its campus community."
             />
-            <span className="w-fit rounded-full bg-green-50 px-4 py-2 text-sm font-bold text-[#006B3C] dark:bg-green-400/10 dark:text-green-300">
-              13 executives
-            </span>
+            <span className="w-fit rounded-full bg-green-50 px-4 py-2 text-sm font-bold text-[#006B3C] dark:bg-green-400/10 dark:text-green-300">13 executives</span>
           </div>
 
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -52,9 +48,7 @@ export default function ExecutiveTeamPage() {
                   <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/45 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 </div>
                 <div className="p-6">
-                  <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#006B3C] dark:text-green-400">
-                    {executive.role}
-                  </p>
+                  <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#006B3C] dark:text-green-400">{executive.role}</p>
                   <h2 className="mt-3 text-2xl font-black text-gray-950 dark:text-white">{executive.name}</h2>
                   <p className="mt-2 text-sm leading-relaxed text-gray-500 dark:text-gray-300">{executive.program}</p>
                 </div>
@@ -69,10 +63,15 @@ export default function ExecutiveTeamPage() {
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-white/55">Get involved</p>
             <h2 className="mt-4 text-3xl font-black">Interested in future leadership?</h2>
-            <p className="mt-3 max-w-2xl text-white/70">Join the community, volunteer at chapter events, and watch Discord for future leadership opportunities.</p>
+            <p className="mt-3 max-w-2xl text-white/70">Ready to help shape the chapter? Submit the executive application to be considered for future leadership opportunities.</p>
           </div>
-          <Link href={discord} target="_blank" rel="noreferrer" className="w-fit rounded-full bg-white px-7 py-3.5 text-sm font-bold text-[#006B3C] transition-transform hover:-translate-y-0.5">
-            Join our Discord →
+          <Link
+            href={chapterLinks.executiveApplication}
+            target="_blank"
+            rel="noreferrer"
+            className="w-fit rounded-full bg-white px-7 py-3.5 text-sm font-bold text-[#006B3C] transition-transform hover:-translate-y-0.5"
+          >
+            Apply for the executive team →
           </Link>
         </div>
       </section>

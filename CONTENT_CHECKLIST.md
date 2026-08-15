@@ -40,7 +40,8 @@ The sample 2026 events currently on the site must be confirmed or replaced.
 
 ## Membership
 
-- [ ] Official chapter membership form URL
+- [x] Official chapter membership form URL
+- [x] Executive application form URL
 - [ ] NSBE national membership URL the chapter wants members to use
 - [ ] Confirmed membership fee information
 - [ ] Confirmed eligibility wording
@@ -50,7 +51,7 @@ The sample 2026 events currently on the site must be confirmed or replaced.
 
 - [ ] Approved sponsorship package PDF
 - [ ] Final sponsorship tiers, contribution amounts, and benefits
-- [ ] Sponsorship contact email
+- [x] Sponsorship contact email (chapter inbox)
 - [ ] Current sponsor logos (SVG or transparent PNG preferred)
 - [ ] Website URL for every sponsor logo
 - [ ] 1–3 photos showing members interacting with sponsors or employers
@@ -80,7 +81,7 @@ Recommended: 4–8 edited photos per album, with permission to publish.
 
 ## Contact and infrastructure
 
-- [ ] Official chapter email address
+- [x] Official chapter email address
 - [ ] Regular meeting location or office details, if public
 - [ ] Supabase project URL and public anon key
 - [ ] Confirmed destination for contact-form notifications
