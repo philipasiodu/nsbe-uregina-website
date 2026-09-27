@@ -11,9 +11,10 @@ This checklist covers the placeholder content that still needs to be supplied be
 
 ## Executive team — complete
 
-- [x] Names and role titles for all 13 executives
-- [x] Academic programs for all 13 executives
-- [x] Headshots for all 13 executives
+- [x] Names and role titles for all 12 current executives
+- [x] Academic programs for all 12 current executives
+- [x] Headshots for all 12 current executives
+- [x] Policy Director responsibilities confirmed from the 2026–2027 constitution
 - [x] Individual contact fields removed by chapter decision
 - [x] Individual LinkedIn fields omitted by chapter decision
 
@@ -43,14 +44,14 @@ The sample 2026 events currently on the site must be confirmed or replaced.
 - [x] Official chapter membership form URL
 - [x] Executive application form URL
 - [ ] NSBE national membership URL the chapter wants members to use
-- [ ] Confirmed membership fee information
-- [ ] Confirmed eligibility wording
+- [x] Confirmed membership fee information
+- [x] Confirmed eligibility wording
 - [ ] Committee or volunteer-interest form URL, if separate
 
 ## Sponsors
 
-- [ ] Approved sponsorship package PDF
-- [ ] Final sponsorship tiers, contribution amounts, and benefits
+- [x] Approved sponsorship package PDF
+- [x] Final sponsorship tiers, contribution amounts, and benefits
 - [x] Sponsorship contact email (chapter inbox)
 - [ ] Current sponsor logos (SVG or transparent PNG preferred)
 - [ ] Website URL for every sponsor logo

@@ -7,7 +7,7 @@ import { chapterLinks, executives } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Executive Team",
-  description: "Meet the 13 student leaders serving the NSBE University of Regina chapter.",
+  description: "Meet the 12 student leaders serving the NSBE University of Regina chapter.",
 };
 
 export default function ExecutiveTeamPage() {
@@ -15,7 +15,7 @@ export default function ExecutiveTeamPage() {
     <>
       <PageHero
         eyebrow="Executive team"
-        title="Thirteen leaders. One chapter."
+        title="Twelve leaders. One chapter."
         description="Meet the students responsible for chapter strategy, member experience, events, partnerships, communications, advocacy, and continuity."
         primary={{ label: "Join the chapter", href: "/membership" }}
       />
@@ -26,9 +26,9 @@ export default function ExecutiveTeamPage() {
             <SectionHeading
               eyebrow="2026–27 team"
               title="Student leadership in action."
-              description="Our executive team brings together students from engineering, data science, and nursing to serve the chapter and strengthen its campus community."
+              description="Our executive team brings together students from engineering and data science to serve the chapter and strengthen its campus community."
             />
-            <span className="w-fit rounded-full bg-green-50 px-4 py-2 text-sm font-bold text-[#006B3C] dark:bg-green-400/10 dark:text-green-300">13 executives</span>
+            <span className="w-fit rounded-full bg-green-50 px-4 py-2 text-sm font-bold text-[#006B3C] dark:bg-green-400/10 dark:text-green-300">12 executives</span>
           </div>
 
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -51,6 +51,11 @@ export default function ExecutiveTeamPage() {
                   <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#006B3C] dark:text-green-400">{executive.role}</p>
                   <h2 className="mt-3 text-2xl font-black text-gray-950 dark:text-white">{executive.name}</h2>
                   <p className="mt-2 text-sm leading-relaxed text-gray-500 dark:text-gray-300">{executive.program}</p>
+                  {executive.focus ? (
+                    <p className="mt-4 border-t border-gray-100 pt-4 text-sm leading-relaxed text-gray-600 dark:border-white/10 dark:text-gray-300">
+                      {executive.focus}
+                    </p>
+                  ) : null}
                 </div>
               </article>
             ))}

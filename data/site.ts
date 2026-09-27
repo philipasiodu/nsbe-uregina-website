@@ -16,18 +16,31 @@ export const chapterLinks = {
     "https://docs.google.com/forms/d/e/1FAIpQLScIXXGYmp4fluEB8RTMfPeXFnh_ppuvYuinD1Svw1oUxgjpuA/viewform",
 };
 
-export const executives = [
+export type Executive = {
+  role: string;
+  name: string;
+  program: string;
+  image: string;
+  focus?: string;
+};
+
+export const executives: Executive[] = [
   { role: "President", name: "Godwill", program: "Electrical/Electronics Engineering", image: "/media/executives/godwill.jpg" },
   { role: "Vice President, Finance", name: "Nathan", program: "Software Engineering", image: "/media/executives/nathan.jpg" },
   { role: "Vice President, University Affairs", name: "Grace", program: "Energy Systems Engineering", image: "/media/executives/grace.jpg" },
   { role: "Vice President, External", name: "Eric", program: "Data Science", image: "/media/executives/eric.jpg" },
   { role: "Vice President, Events", name: "Gianna", program: "Electrical/Electronics Engineering", image: "/media/executives/gianna.jpg" },
   { role: "Vice President, Marketing", name: "Rugie", program: "Electrical/Electronics Engineering", image: "/media/executives/rugie.jpg" },
-  { role: "Policy Director", name: "Damola", program: "Energy Systems Engineering", image: "/media/executives/damola.jpg" },
+  {
+    role: "Policy Director",
+    name: "Damola",
+    program: "Energy Systems Engineering",
+    image: "/media/executives/damola.jpg",
+    focus: "Tracks chapter compliance with URSA and NSBE National governance requirements and supports constitutional and policy review.",
+  },
   { role: "Sponsorship Director", name: "Prisca", program: "Electrical/Electronics Engineering", image: "/media/executives/prisca.jpg" },
   { role: "Secretary", name: "Chayil", program: "Electrical/Electronics Engineering", image: "/media/executives/chayil.jpg" },
   { role: "Technical Director", name: "Philip", program: "Software Engineering", image: "/media/executives/philip.jpg" },
-  { role: "Faculty of Nursing Representative", name: "David", program: "Nursing", image: "/media/executives/david.jpg" },
   { role: "Faculty of Engineering Representative", name: "Damilola", program: "Energy Systems Engineering", image: "/media/executives/damilola.jpg" },
   { role: "First-Year Representative", name: "Fareed", program: "Electrical/Electronics Engineering", image: "/media/executives/fareed.jpg" },
 ];
@@ -134,9 +147,9 @@ export const resources: Resource[] = [
 ];
 
 export const faqs = [
-  { question: "Who can join NSBE URegina?", answer: "Membership is open to University of Regina students who support NSBE's mission. Students from every background and discipline are welcome." },
-  { question: "Do I need to be an engineering student?", answer: "No. Although our programming centres engineering and technology, students from related disciplines and allies are encouraged to participate." },
-  { question: "Is there a membership fee?", answer: "Chapter and national fee details still need to be confirmed. This section will be updated before public launch." },
+  { question: "Who can join NSBE URegina?", answer: "Membership is open to any University of Regina student who supports NSBE's mission, without discrimination on any protected characteristic." },
+  { question: "Do I need to be an engineering student?", answer: "No. NSBE URegina welcomes students across STEAM disciplines: science, technology, engineering, arts, and mathematics." },
+  { question: "Is there a membership fee?", answer: "No. NSBE URegina chapter membership has no dues requirement." },
   { question: "How do I hear about upcoming events?", answer: "Join the chapter Discord and follow Instagram or LinkedIn. Event registration links will also appear on the Events page." },
 ];
 
