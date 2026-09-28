@@ -430,8 +430,7 @@ export default function HomePage() {
       {/* ── SPONSORS ─────────────────────────────────────────────────────── */}
       <section className="border-t border-gray-200 bg-gray-50 py-24 dark:border-white/10 dark:bg-[#0b1712]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
-            <div>
+          <div className="max-w-3xl">
               <p className="text-[#006B3C] text-xs font-bold tracking-[0.25em] uppercase mb-6">
                 Partners & Sponsors
               </p>
@@ -452,23 +451,6 @@ export default function HomePage() {
                 Become a Sponsor
                 <span aria-hidden>→</span>
               </Link>
-            </div>
-
-            <div>
-              <p className="text-xs text-gray-400 font-bold tracking-[0.2em] uppercase mb-6">
-                Current sponsors
-              </p>
-              <div className="grid grid-cols-3 gap-3">
-                {Array.from({ length: 6 }).map((_, i) => (
-                  <div
-                    key={i}
-                    className="flex aspect-video items-center justify-center rounded-xl border-2 border-dashed border-gray-200 bg-white transition-all hover:-translate-y-0.5 hover:border-[#006B3C]/30 hover:shadow-md dark:border-white/10 dark:bg-[#122019]"
-                  >
-                    <span className="text-gray-300 text-xs font-bold tracking-widest">LOGO</span>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
       </section>

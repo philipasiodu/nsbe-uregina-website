@@ -141,21 +141,6 @@ export default function SponsorsPage() {
         </div>
       </section>
 
-      <section className="bg-white py-24 dark:bg-[#07110d]">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            eyebrow="Current partners"
-            title="Organizations supporting the mission."
-            description="Approved sponsor logos and website links will appear here as partnerships are confirmed."
-          />
-          <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-3">
-            {Array.from({ length: 6 }).map((_, index) => (
-              <MediaPlaceholder key={index} label={`Sponsor logo ${index + 1}`} detail="Logo and website link" className="aspect-video" />
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="bg-gray-950 py-20 text-white">
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-[1fr_0.8fr] lg:px-8">
           <div>

@@ -53,8 +53,6 @@ The sample schedule has been removed. Future events still need the same confirme
 - [x] Approved sponsorship package PDF
 - [x] Final sponsorship tiers, contribution amounts, and benefits
 - [x] Sponsorship contact email (chapter inbox)
-- [ ] Current sponsor logos (SVG or transparent PNG preferred)
-- [ ] Website URL for every sponsor logo
 - [ ] 1–3 photos showing members interacting with sponsors or employers
 
 ## Resources
