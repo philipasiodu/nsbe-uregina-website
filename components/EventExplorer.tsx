@@ -38,13 +38,21 @@ export default function EventExplorer({ events }: { events: ChapterEvent[] }) {
             </div>
             <h3 className="mt-7 text-2xl font-black tracking-tight text-gray-950 group-hover:text-[#006B3C] dark:text-white dark:group-hover:text-green-300">{event.title}</h3>
             <p className="mt-4 flex-1 leading-relaxed text-gray-500 dark:text-gray-300">{event.description}</p>
+            {event.highlights && (
+              <div className="mt-6 rounded-xl bg-gray-50 p-5 dark:bg-white/5">
+                <p className="text-xs font-black uppercase tracking-[0.18em] text-[#006B3C] dark:text-green-300">What to expect</p>
+                <ul className="mt-3 space-y-2 text-sm leading-relaxed text-gray-600 dark:text-gray-300">
+                  {event.highlights.map((highlight) => <li key={highlight} className="flex gap-3"><span className="text-[#006B3C] dark:text-green-300" aria-hidden>•</span><span>{highlight}</span></li>)}
+                </ul>
+              </div>
+            )}
             <dl className="mt-7 grid grid-cols-2 gap-4 border-t border-gray-100 pt-5 text-sm dark:border-white/10">
               <div><dt className="text-xs uppercase tracking-widest text-gray-400">Time</dt><dd className="mt-1 font-bold text-gray-800 dark:text-white">{event.time}</dd></div>
               <div><dt className="text-xs uppercase tracking-widest text-gray-400">Location</dt><dd className="mt-1 font-bold text-gray-800 dark:text-white">{event.location}</dd></div>
             </dl>
             {status === "Upcoming" && (
               <div className="mt-6">
-                {event.registrationUrl ? <a href={event.registrationUrl} target="_blank" rel="noreferrer" className="inline-flex rounded-full bg-[#006B3C] px-5 py-2.5 text-sm font-bold text-white">Register ↗</a> : <span className="inline-flex rounded-full border border-dashed border-gray-300 px-5 py-2.5 text-sm font-bold text-gray-400 dark:border-white/15">Registration link coming soon</span>}
+                {event.registrationUrl ? <a href={event.registrationUrl} target="_blank" rel="noreferrer" className="inline-flex rounded-full bg-[#006B3C] px-5 py-2.5 text-sm font-bold text-white">Register ↗</a> : <span className="inline-flex rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm font-semibold text-gray-600 dark:border-white/10 dark:bg-white/5 dark:text-gray-300">{event.attendanceNote ?? "Attendance details coming soon"}</span>}
               </div>
             )}
           </article>

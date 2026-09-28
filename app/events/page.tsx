@@ -12,7 +12,7 @@ export default function EventsPage() {
       <PageHero eyebrow="Events & programming" title="Learn together. Connect in person." description="Explore professional development, academic support, networking, and community experiences created for our members." primary={{ label: "Join the chapter", href: "/membership" }} />
       <section className="bg-gray-50 py-24 dark:bg-[#0b1712]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-12 flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between"><SectionHeading eyebrow="Calendar" title="What’s happening." description="Filter the schedule by status or event type. Dates without confirmed details are marked clearly." /><span className="w-fit rounded-full border border-amber-200 bg-amber-50 px-4 py-2 text-xs font-bold text-amber-800 dark:border-amber-300/20 dark:bg-amber-300/10 dark:text-amber-200">Sample schedule — confirm before launch</span></div>
+          <div className="mb-12 flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between"><SectionHeading eyebrow="Calendar" title="What’s happening." description="Explore confirmed chapter events and filter the schedule by status or event type." /><span className="w-fit rounded-full border border-green-200 bg-green-50 px-4 py-2 text-xs font-bold text-[#006B3C] dark:border-green-300/20 dark:bg-green-300/10 dark:text-green-200">Fall 2026 schedule</span></div>
           <EventExplorer events={chapterEvents} />
         </div>
       </section>

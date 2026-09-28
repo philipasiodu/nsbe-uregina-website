@@ -25,12 +25,48 @@ export type Executive = {
 };
 
 export const executives: Executive[] = [
-  { role: "President", name: "Godwill", program: "Electrical/Electronics Engineering", image: "/media/executives/godwill.jpg" },
-  { role: "Vice President, Finance", name: "Nathan", program: "Software Engineering", image: "/media/executives/nathan.jpg" },
-  { role: "Vice President, University Affairs", name: "Grace", program: "Energy Systems Engineering", image: "/media/executives/grace.jpg" },
-  { role: "Vice President, External", name: "Eric", program: "Data Science", image: "/media/executives/eric.jpg" },
-  { role: "Vice President, Events", name: "Gianna", program: "Electrical/Electronics Engineering", image: "/media/executives/gianna.jpg" },
-  { role: "Vice President, Marketing", name: "Rugie", program: "Electrical/Electronics Engineering", image: "/media/executives/rugie.jpg" },
+  {
+    role: "President",
+    name: "Godwill",
+    program: "Electrical/Electronics Engineering",
+    image: "/media/executives/godwill.jpg",
+    focus: "Presides over chapter meetings, represents NSBE URegina to URSA and NSBE National, and oversees the chapter strategic plan.",
+  },
+  {
+    role: "Vice President, Finance",
+    name: "Nathan",
+    program: "Software Engineering",
+    image: "/media/executives/nathan.jpg",
+    focus: "Maintains the chapter's financial records, prepares the annual budget, and reports on chapter finances at the Annual General Meeting.",
+  },
+  {
+    role: "Vice President, University Affairs",
+    name: "Grace",
+    program: "Energy Systems Engineering",
+    image: "/media/executives/grace.jpg",
+    focus: "Liaises with URSA and University of Regina departments while supporting student advocacy and campus relationships.",
+  },
+  {
+    role: "Vice President, External",
+    name: "Eric",
+    program: "Data Science",
+    image: "/media/executives/eric.jpg",
+    focus: "Builds relationships with sponsors, industry partners, and the wider Black professional community.",
+  },
+  {
+    role: "Vice President, Events",
+    name: "Gianna",
+    program: "Electrical/Electronics Engineering",
+    image: "/media/executives/gianna.jpg",
+    focus: "Plans and delivers chapter events that support professional development, academic success, and community-building.",
+  },
+  {
+    role: "Vice President, Marketing",
+    name: "Rugie",
+    program: "Electrical/Electronics Engineering",
+    image: "/media/executives/rugie.jpg",
+    focus: "Leads chapter communications, member outreach, and promotion across social, digital, and event channels.",
+  },
   {
     role: "Policy Director",
     name: "Damola",
@@ -38,11 +74,41 @@ export const executives: Executive[] = [
     image: "/media/executives/damola.jpg",
     focus: "Tracks chapter compliance with URSA and NSBE National governance requirements and supports constitutional and policy review.",
   },
-  { role: "Sponsorship Director", name: "Prisca", program: "Electrical/Electronics Engineering", image: "/media/executives/prisca.jpg" },
-  { role: "Secretary", name: "Chayil", program: "Electrical/Electronics Engineering", image: "/media/executives/chayil.jpg" },
-  { role: "Technical Director", name: "Philip", program: "Software Engineering", image: "/media/executives/philip.jpg" },
-  { role: "Faculty of Engineering Representative", name: "Damilola", program: "Energy Systems Engineering", image: "/media/executives/damilola.jpg" },
-  { role: "First-Year Representative", name: "Fareed", program: "Electrical/Electronics Engineering", image: "/media/executives/fareed.jpg" },
+  {
+    role: "Sponsorship Director",
+    name: "Prisca",
+    program: "Electrical/Electronics Engineering",
+    image: "/media/executives/prisca.jpg",
+    focus: "Identifies sponsorship opportunities and maintains relationships with organizations that support chapter programming.",
+  },
+  {
+    role: "Secretary",
+    name: "Chayil",
+    program: "Electrical/Electronics Engineering",
+    image: "/media/executives/chayil.jpg",
+    focus: "Records and distributes meeting minutes and maintains the chapter's official documents and records.",
+  },
+  {
+    role: "Technical Director",
+    name: "Philip",
+    program: "Software Engineering",
+    image: "/media/executives/philip.jpg",
+    focus: "Leads technical programming, workshops, skill-building initiatives, and chapter technology projects.",
+  },
+  {
+    role: "Faculty of Engineering Representative",
+    name: "Damilola",
+    program: "Energy Systems Engineering",
+    image: "/media/executives/damilola.jpg",
+    focus: "Represents engineering students and serves as a liaison with the Faculty of Engineering and Applied Science.",
+  },
+  {
+    role: "First-Year Representative",
+    name: "Fareed",
+    program: "Electrical/Electronics Engineering",
+    image: "/media/executives/fareed.jpg",
+    focus: "Represents the interests and experiences of first-year members within the chapter.",
+  },
 ];
 
 export type ChapterEvent = {
@@ -55,75 +121,29 @@ export type ChapterEvent = {
   category: "Community" | "Career" | "Academic" | "Networking";
   status: "Upcoming" | "Past";
   description: string;
+  highlights?: string[];
   registrationUrl?: string;
+  attendanceNote?: string;
 };
 
 export const chapterEvents: ChapterEvent[] = [
   {
     id: 1,
-    title: "Fall Kickoff & Mixer",
-    date: "2026-08-12",
-    displayDate: "August 12, 2026",
-    time: "5:30 PM",
-    location: "EDC Atrium — University of Regina",
+    title: "2026 Annual General Meeting & Chapter Kickoff",
+    date: "2026-09-29",
+    displayDate: "September 29, 2026",
+    time: "6:00–8:30 PM",
+    location: "ED 114 — University of Regina",
     category: "Community",
     status: "Upcoming",
-    description: "Meet the chapter, connect with students, and learn what NSBE URegina has planned for the year.",
-  },
-  {
-    id: 2,
-    title: "Resume & Career Workshop",
-    date: "2026-09-05",
-    displayDate: "September 5, 2026",
-    time: "6:00 PM",
-    location: "Room to be confirmed",
-    category: "Career",
-    status: "Upcoming",
-    description: "A practical resume review and interview preparation session with industry volunteers.",
-  },
-  {
-    id: 3,
-    title: "Industry Night",
-    date: "2026-09-20",
-    displayDate: "September 20, 2026",
-    time: "6:30 PM",
-    location: "Location to be confirmed",
-    category: "Networking",
-    status: "Upcoming",
-    description: "Connect with engineering employers and hear candid career advice from Black professionals.",
-  },
-  {
-    id: 4,
-    title: "Midterm Study Hall",
-    date: "2026-10-08",
-    displayDate: "October 8, 2026",
-    time: "4:00 PM",
-    location: "Room to be confirmed",
-    category: "Academic",
-    status: "Upcoming",
-    description: "A focused peer study session with snacks, course support, and quiet work zones.",
-  },
-  {
-    id: 5,
-    title: "Black History Month Panel",
-    date: "2026-02-18",
-    displayDate: "February 18, 2026",
-    time: "6:00 PM",
-    location: "University of Regina",
-    category: "Community",
-    status: "Past",
-    description: "Students and professionals discussed representation, leadership, and the future of engineering.",
-  },
-  {
-    id: 6,
-    title: "Technical Interview Lab",
-    date: "2026-03-12",
-    displayDate: "March 12, 2026",
-    time: "5:30 PM",
-    location: "University of Regina",
-    category: "Career",
-    status: "Past",
-    description: "Members practiced technical and behavioural interview questions in small groups.",
+    description: "Help launch chapter year two with community-building, chapter updates, member participation, elections, and a shared vision for NSBE URegina's 2026–27 year.",
+    highlights: [
+      "Registration, opening remarks, an icebreaker, food, and networking",
+      "Year One review plus finance, university affairs, and external-opportunity updates",
+      "Member motions and elections for First-Year Representative and Graphics Coordinator",
+      "A member brainstorm on events, academic support, industry connections, and campus impact",
+    ],
+    attendanceNote: "No advance registration is listed. Doors open at 6:00 PM in ED 114.",
   },
 ];
 

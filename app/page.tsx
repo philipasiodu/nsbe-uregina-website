@@ -3,6 +3,7 @@ import Image from "next/image";
 import AnimatedStats, { type HomepageStat } from "@/components/AnimatedStats";
 import FeaturedEventCarousel from "@/components/FeaturedEventCarousel";
 import HomeEnhancements from "@/components/HomeEnhancements";
+import { chapterEvents } from "@/data/site";
 
 const STATS: HomepageStat[] = [
   { value: 16_000, suffix: "+", label: "Members Worldwide" },
@@ -67,32 +68,8 @@ const ENGAGEMENT_PATHS = [
   },
 ];
 
-const EVENTS = [
-  {
-    id: 1,
-    month: "AUG",
-    day: "12",
-    title: "Fall Kickoff & Mixer",
-    location: "EDC Atrium — University of Regina",
-    type: "Social",
-  },
-  {
-    id: 2,
-    month: "SEP",
-    day: "05",
-    title: "Resume & Career Workshop",
-    location: "RI 108 — University of Regina",
-    type: "Professional Dev",
-  },
-  {
-    id: 3,
-    month: "SEP",
-    day: "20",
-    title: "Industry Night",
-    location: "Conexus Arts Centre, Regina",
-    type: "Networking",
-  },
-];
+const UPCOMING_EVENTS = chapterEvents.filter((event) => event.status === "Upcoming");
+const FEATURED_EVENT = UPCOMING_EVENTS[0];
 
 export default function HomePage() {
   return (
@@ -342,20 +319,19 @@ export default function HomePage() {
                 Featured event
               </p>
               <h3 className="mt-5 text-3xl font-black tracking-tight text-white sm:text-4xl">
-                Fall Kickoff &amp; Mixer
+                {FEATURED_EVENT.title}
               </h3>
               <p className="mt-5 leading-relaxed text-white/60">
-                Meet the chapter, connect with engineering students, and learn what NSBE
-                URegina has planned for the year ahead.
+                {FEATURED_EVENT.description}
               </p>
               <dl className="mt-8 grid grid-cols-2 gap-6 border-y border-white/10 py-6">
                 <div>
                   <dt className="text-xs font-bold uppercase tracking-widest text-white/35">Date</dt>
-                  <dd className="mt-2 font-bold text-white">August 12</dd>
+                  <dd className="mt-2 font-bold text-white">{FEATURED_EVENT.displayDate}</dd>
                 </div>
                 <div>
                   <dt className="text-xs font-bold uppercase tracking-widest text-white/35">Location</dt>
-                  <dd className="mt-2 font-bold text-white">EDC Atrium</dd>
+                  <dd className="mt-2 font-bold text-white">ED 114</dd>
                 </div>
               </dl>
               <Link
@@ -368,7 +344,9 @@ export default function HomePage() {
           </div>
 
           <div className="grid gap-4">
-            {EVENTS.map((event) => (
+            {UPCOMING_EVENTS.map((event) => {
+              const eventDate = new Date(`${event.date}T12:00:00`);
+              return (
               <Link
                 key={event.id}
                 href="/events"
@@ -377,9 +355,9 @@ export default function HomePage() {
                 {/* Date block */}
                 <div className="w-16 shrink-0 rounded-lg bg-[#006B3C] py-3 text-center transition-transform duration-300 group-hover:scale-105">
                   <div className="text-white/60 text-xs font-bold tracking-widest uppercase">
-                    {event.month}
+                    {eventDate.toLocaleDateString("en-CA", { month: "short" })}
                   </div>
-                  <div className="text-white font-black text-2xl leading-tight">{event.day}</div>
+                  <div className="text-white font-black text-2xl leading-tight">{eventDate.getDate()}</div>
                 </div>
 
                 {/* Info */}
@@ -387,7 +365,7 @@ export default function HomePage() {
                   <div className="flex flex-wrap items-center gap-3 mb-1">
                     <h3 className="text-lg font-bold text-gray-900 transition-colors group-hover:text-[#006B3C] dark:text-white dark:group-hover:text-green-300">{event.title}</h3>
                     <span className="rounded-full border border-green-200 bg-green-50 px-2.5 py-1 text-xs font-bold text-[#006B3C] dark:border-green-400/20 dark:bg-green-400/10 dark:text-green-300">
-                      {event.type}
+                      {event.category}
                     </span>
                   </div>
                   <p className="text-gray-400 text-sm dark:text-gray-400">{event.location}</p>
@@ -397,7 +375,8 @@ export default function HomePage() {
                   →
                 </span>
               </Link>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

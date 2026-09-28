@@ -14,7 +14,7 @@ This checklist covers the placeholder content that still needs to be supplied be
 - [x] Names and role titles for all 12 current executives
 - [x] Academic programs for all 12 current executives
 - [x] Headshots for all 12 current executives
-- [x] Policy Director responsibilities confirmed from the 2026–2027 constitution
+- [x] Responsibilities confirmed for all 12 current executive positions from the 2026–2027 constitution
 - [x] Individual contact fields removed by chapter decision
 - [x] Individual LinkedIn fields omitted by chapter decision
 
@@ -31,13 +31,13 @@ The chapter founding year, founding executives, and historical photo were not fo
 
 For every event:
 
-- [ ] Final title, date, time, and location
-- [ ] Short description
-- [ ] Registration URL
-- [ ] Event category
+- [x] Final title, date, time, and location for the Fall 2026 AGM & Chapter Kickoff
+- [x] Short description and attendee-facing agenda highlights for the Fall 2026 AGM & Chapter Kickoff
+- [x] Registration status for the Fall 2026 AGM & Chapter Kickoff (no advance registration listed)
+- [x] Event category for the Fall 2026 AGM & Chapter Kickoff
 - [ ] Optional event poster or cover image
 
-The sample 2026 events currently on the site must be confirmed or replaced.
+The sample schedule has been removed. Future events still need the same confirmed information before they are added.
 
 ## Membership
 
