@@ -141,25 +141,6 @@ export const chapterEvents: ChapterEvent[] = [
   },
 ];
 
-export type Resource = {
-  title: string;
-  category: "Career" | "Academic" | "Scholarships" | "Wellness";
-  description: string;
-  format: string;
-  href?: string;
-};
-
-export const resources: Resource[] = [
-  { title: "NSBE Resume Checklist", category: "Career", description: "A concise checklist for building an internship-ready engineering resume.", format: "PDF placeholder" },
-  { title: "Interview Preparation Guide", category: "Career", description: "Behavioural and technical interview prompts with preparation notes.", format: "PDF placeholder" },
-  { title: "Internship Search Board", category: "Career", description: "A maintained collection of engineering and technology opportunities.", format: "Link placeholder" },
-  { title: "Scholarship Directory", category: "Scholarships", description: "Awards and scholarships relevant to Black students in STEM.", format: "Spreadsheet placeholder" },
-  { title: "Peer Tutoring Directory", category: "Academic", description: "Connect with members offering support across core engineering courses.", format: "Directory placeholder" },
-  { title: "Study Planning Template", category: "Academic", description: "A weekly planning template for balancing labs, lectures, and projects.", format: "Template placeholder" },
-  { title: "Campus Wellness Services", category: "Wellness", description: "Quick access to counselling, accessibility, and student support resources.", format: "Link placeholder" },
-  { title: "NSBE National Resources", category: "Scholarships", description: "National programs, conferences, scholarships, and membership opportunities.", format: "Link placeholder", href: "https://www.nsbe.org/" },
-];
-
 export const faqs = [
   { question: "Who can join NSBE URegina?", answer: "Membership is open to any University of Regina student who supports NSBE's mission, without discrimination on any protected characteristic." },
   { question: "Do I need to be an engineering student?", answer: "No. NSBE URegina welcomes students across STEAM disciplines: science, technology, engineering, arts, and mathematics." },

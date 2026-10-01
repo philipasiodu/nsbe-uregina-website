@@ -55,17 +55,6 @@ The sample schedule has been removed. Future events still need the same confirme
 - [x] Sponsorship contact email (chapter inbox)
 - [ ] 1–3 photos showing members interacting with sponsors or employers
 
-## Resources
-
-- [ ] Resume checklist PDF
-- [ ] Interview preparation guide PDF
-- [ ] Internship/job board URL
-- [ ] Scholarship directory or spreadsheet URL
-- [ ] Peer tutoring directory or sign-up URL
-- [ ] Study planning template
-- [ ] University wellness/support URLs
-- [ ] Any chapter-exclusive resources and access instructions
-
 ## Gallery
 
 The current gallery contains 18 curated photos covering community, professional development, collaborative learning, career readiness, campus outreach, student engagement, and chapter visibility.

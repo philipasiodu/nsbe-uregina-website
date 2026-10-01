@@ -46,9 +46,9 @@ const ENGAGEMENT_PATHS = [
   },
   {
     eyebrow: "Grow",
-    title: "Career resources",
-    body: "Explore resume guidance, scholarships, internships, and workshops.",
-    href: "/resources",
+    title: "Upcoming events",
+    body: "Join workshops, community gatherings, and professional development opportunities.",
+    href: "/events",
     accent: "bg-amber-300 text-gray-950",
   },
   {

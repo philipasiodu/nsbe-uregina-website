@@ -15,7 +15,7 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Contact"
         title="Let’s start a conversation."
-        description="Reach out about membership, events, resources, sponsorship, collaborations, or anything else related to the chapter."
+        description="Reach out about membership, events, sponsorship, collaborations, or anything else related to the chapter."
       />
       <section className="bg-gray-50 py-24 dark:bg-[#0b1712]">
         <div className="mx-auto grid max-w-7xl gap-14 px-4 sm:px-6 lg:grid-cols-[0.72fr_1.28fr] lg:px-8">
