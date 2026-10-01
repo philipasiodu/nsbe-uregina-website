@@ -9,12 +9,12 @@ This checklist covers the placeholder content that still needs to be supplied be
 - [ ] One square chapter logo for the favicon and social profiles
 - [ ] One 1200 × 630 px social sharing image for Open Graph/LinkedIn previews
 
-## Executive team — complete
+## Executive team
 
-- [x] Names and role titles for all 12 current executives
-- [x] Academic programs for all 12 current executives
-- [x] Headshots for all 12 current executives
-- [x] Responsibilities confirmed for all 12 current executive positions from the 2026–2027 constitution
+- [x] Names, role titles, academic programs, and headshots for all 10 current executives
+- [ ] Name, academic program, and headshot for the Social Media Director once appointed
+- [ ] Name, academic program, and headshot for the Media Director once appointed
+- [x] Responsibilities documented for all 12 executive positions, including the two current vacancies
 - [x] Individual contact fields removed by chapter decision
 - [x] Individual LinkedIn fields omitted by chapter decision
 

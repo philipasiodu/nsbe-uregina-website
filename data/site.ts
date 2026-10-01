@@ -18,9 +18,9 @@ export const chapterLinks = {
 
 export type Executive = {
   role: string;
-  name: string;
-  program: string;
-  image: string;
+  name?: string;
+  program?: string;
+  image?: string;
   focus?: string;
 };
 
@@ -54,18 +54,11 @@ export const executives: Executive[] = [
     focus: "Builds relationships with sponsors, industry partners, and the wider Black professional community.",
   },
   {
-    role: "Vice President, Events",
+    role: "Vice President, Events and Communications",
     name: "Gianna",
     program: "Electrical/Electronics Engineering",
     image: "/media/executives/gianna.jpg",
-    focus: "Plans and delivers chapter events that support professional development, academic success, and community-building.",
-  },
-  {
-    role: "Vice President, Marketing",
-    name: "Rugie",
-    program: "Electrical/Electronics Engineering",
-    image: "/media/executives/rugie.jpg",
-    focus: "Leads chapter communications, member outreach, and promotion across social, digital, and event channels.",
+    focus: "Plans and delivers chapter events while coordinating member communications and event outreach.",
   },
   {
     role: "Policy Director",
@@ -75,13 +68,6 @@ export const executives: Executive[] = [
     focus: "Tracks chapter compliance with URSA and NSBE National governance requirements and supports constitutional and policy review.",
   },
   {
-    role: "Sponsorship Director",
-    name: "Prisca",
-    program: "Electrical/Electronics Engineering",
-    image: "/media/executives/prisca.jpg",
-    focus: "Identifies sponsorship opportunities and maintains relationships with organizations that support chapter programming.",
-  },
-  {
     role: "Secretary",
     name: "Chayil",
     program: "Electrical/Electronics Engineering",
@@ -89,11 +75,11 @@ export const executives: Executive[] = [
     focus: "Records and distributes meeting minutes and maintains the chapter's official documents and records.",
   },
   {
-    role: "Technical Director",
+    role: "Vice President, Technologies",
     name: "Philip",
     program: "Software Engineering",
     image: "/media/executives/philip.jpg",
-    focus: "Leads technical programming, workshops, skill-building initiatives, and chapter technology projects.",
+    focus: "Oversees the chapter website, software, digital tools, and technology strategy while supporting technical initiatives.",
   },
   {
     role: "Faculty of Engineering Representative",
@@ -103,11 +89,19 @@ export const executives: Executive[] = [
     focus: "Represents engineering students and serves as a liaison with the Faculty of Engineering and Applied Science.",
   },
   {
-    role: "First-Year Representative",
+    role: "Technical Director",
     name: "Fareed",
     program: "Electrical/Electronics Engineering",
     image: "/media/executives/fareed.jpg",
-    focus: "Represents the interests and experiences of first-year members within the chapter.",
+    focus: "Leads technical programming, workshops, skill-building initiatives, and chapter technology projects.",
+  },
+  {
+    role: "Social Media Director",
+    focus: "Manages chapter social channels, content planning, and online community engagement.",
+  },
+  {
+    role: "Media Director",
+    focus: "Coordinates event photography, video, visual storytelling, and the chapter media archive.",
   },
 ];
 
