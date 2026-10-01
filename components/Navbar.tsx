@@ -2,7 +2,9 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import { usePathname } from "next/navigation";
+import BrandMark from "@/components/BrandMark";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const NAV_LINKS = [
   { label: "Home", href: "/" },
@@ -12,10 +14,12 @@ const NAV_LINKS = [
   { label: "Membership", href: "/membership" },
   { label: "Sponsors", href: "/sponsors" },
   { label: "Resources", href: "/resources" },
+  { label: "Gallery", href: "/gallery" },
   { label: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -29,7 +33,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-shadow duration-300 bg-white ${
+      className={`fixed top-0 left-0 right-0 z-50 bg-white/95 transition-all duration-300 backdrop-blur dark:bg-gray-950/95 ${
         scrolled ? "shadow-md" : "shadow-sm"
       }`}
     >
@@ -42,21 +46,20 @@ export default function Navbar() {
             onClick={closeMenu}
             className="flex items-center gap-3 min-w-0 shrink-0"
           >
-            <div className="w-9 h-9 rounded-full bg-[#006B3C] flex items-center justify-center shrink-0">
-              <span className="text-white font-bold text-sm tracking-wide">N</span>
-            </div>
-            <span className="font-semibold text-[#006B3C] text-base leading-tight whitespace-nowrap">
-              NSBE <span className="hidden sm:inline text-gray-600 font-normal">| UofR Chapter</span>
+            <BrandMark size={40} />
+            <span className="font-semibold text-[#006B3C] text-base leading-tight whitespace-nowrap dark:text-green-400">
+              NSBE <span className="hidden sm:inline text-gray-600 font-normal dark:text-gray-300">| UofR Chapter</span>
             </span>
           </Link>
 
           {/* Desktop Nav Links */}
-          <ul className="hidden lg:flex items-center gap-1">
+          <ul className="hidden xl:flex items-center gap-0.5">
             {NAV_LINKS.map(({ label, href }) => (
               <li key={href}>
                 <Link
                   href={href}
-                  className="px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:text-[#006B3C] hover:bg-green-50 transition-colors duration-150"
+                  aria-current={pathname === href ? "page" : undefined}
+                  className={`rounded-md px-2.5 py-2 text-sm font-medium transition-colors duration-150 ${pathname === href ? "bg-green-50 text-[#006B3C] dark:bg-white/10 dark:text-green-300" : "text-gray-700 hover:bg-green-50 hover:text-[#006B3C] dark:text-gray-200 dark:hover:bg-white/10 dark:hover:text-green-300"}`}
                 >
                   {label}
                 </Link>
@@ -66,6 +69,7 @@ export default function Navbar() {
 
           {/* CTA + Hamburger */}
           <div className="flex items-center gap-3">
+            <ThemeToggle />
             <Link
               href="/membership"
               className="inline-flex items-center px-4 py-2 rounded-md bg-[#006B3C] text-white text-sm font-semibold hover:bg-[#005530] active:bg-[#004425] transition-colors duration-150 shadow-sm whitespace-nowrap"
@@ -77,11 +81,11 @@ export default function Navbar() {
               onClick={() => setMenuOpen((prev) => !prev)}
               aria-label={menuOpen ? "Close menu" : "Open menu"}
               aria-expanded={menuOpen}
-              className="lg:hidden flex flex-col justify-center items-center w-9 h-9 rounded-md hover:bg-green-50 transition-colors"
+              className="xl:hidden flex flex-col justify-center items-center w-9 h-9 rounded-md hover:bg-green-50 transition-colors dark:hover:bg-white/10"
             >
-              <span className={`block w-5 h-0.5 bg-gray-700 transition-transform duration-300 ${menuOpen ? "translate-y-1.5 rotate-45" : ""}`} />
-              <span className={`block w-5 h-0.5 bg-gray-700 mt-1 transition-opacity duration-300 ${menuOpen ? "opacity-0" : ""}`} />
-              <span className={`block w-5 h-0.5 bg-gray-700 mt-1 transition-transform duration-300 ${menuOpen ? "-translate-y-1.5 -rotate-45" : ""}`} />
+              <span className={`block w-5 h-0.5 bg-gray-700 transition-transform duration-300 dark:bg-gray-200 ${menuOpen ? "translate-y-1.5 rotate-45" : ""}`} />
+              <span className={`block w-5 h-0.5 bg-gray-700 mt-1 transition-opacity duration-300 dark:bg-gray-200 ${menuOpen ? "opacity-0" : ""}`} />
+              <span className={`block w-5 h-0.5 bg-gray-700 mt-1 transition-transform duration-300 dark:bg-gray-200 ${menuOpen ? "-translate-y-1.5 -rotate-45" : ""}`} />
             </button>
           </div>
         </div>
@@ -89,25 +93,26 @@ export default function Navbar() {
 
       {/* Mobile Dropdown */}
       <div
-        className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+        className={`xl:hidden overflow-hidden transition-all duration-300 ease-in-out ${
           menuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="bg-white border-t border-gray-100 px-4 pb-4 pt-2 shadow-lg">
+        <div className="bg-white border-t border-gray-100 px-4 pb-4 pt-2 shadow-lg dark:border-white/10 dark:bg-gray-950">
           <ul className="flex flex-col gap-1">
             {NAV_LINKS.map(({ label, href }) => (
               <li key={href}>
                 <Link
                   href={href}
                   onClick={closeMenu}
-                  className="block px-3 py-2.5 text-sm font-medium text-gray-700 rounded-md hover:text-[#006B3C] hover:bg-green-50 transition-colors duration-150"
+                  aria-current={pathname === href ? "page" : undefined}
+                  className={`block rounded-md px-3 py-2.5 text-sm font-medium transition-colors duration-150 ${pathname === href ? "bg-green-50 text-[#006B3C] dark:bg-white/10 dark:text-green-300" : "text-gray-700 hover:bg-green-50 hover:text-[#006B3C] dark:text-gray-200 dark:hover:bg-white/10 dark:hover:text-green-300"}`}
                 >
                   {label}
                 </Link>
               </li>
             ))}
           </ul>
-          <div className="mt-3 pt-3 border-t border-gray-100">
+          <div className="mt-3 pt-3 border-t border-gray-100 dark:border-white/10">
             <Link
               href="/membership"
               onClick={closeMenu}

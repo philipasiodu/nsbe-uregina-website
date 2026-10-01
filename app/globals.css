@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -12,15 +14,73 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+[data-theme="dark"] {
+  --background: #07110d;
+  --foreground: #f3f4f6;
+  color-scheme: dark;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+body,
+header,
+main,
+section,
+footer {
+  transition-property: background-color, border-color, color;
+  transition-duration: 250ms;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.hero-grid {
+  animation: hero-grid-drift 20s linear infinite;
+}
+
+.scroll-cue {
+  animation: scroll-cue 1.8s ease-in-out infinite;
+  transform-origin: top;
+}
+
+@keyframes hero-grid-drift {
+  to {
+    background-position: 80px 80px;
+  }
+}
+
+@keyframes scroll-cue {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scaleY(0.45);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hero-grid,
+  .scroll-cue {
+    animation: none;
+  }
+
+  body,
+  header,
+  main,
+  section,
+  footer {
+    transition: none;
+  }
 }
