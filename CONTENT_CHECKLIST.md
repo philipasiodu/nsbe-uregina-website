@@ -70,8 +70,8 @@ The sample schedule has been removed. Future events still need the same confirme
 
 Recommended: 4–8 edited photos per album, with permission to publish.
 
-- [ ] Professional development/workshop photos
-- [ ] Community and outreach photos
+- [x] Professional development/workshop photos
+- [x] Community and outreach photos
 - [ ] Industry networking and sponsor photos
 - [ ] Academic support/study-session photos
 - [ ] Conference or chapter travel photos
