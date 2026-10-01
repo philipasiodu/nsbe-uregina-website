@@ -68,15 +68,13 @@ The sample schedule has been removed. Future events still need the same confirme
 
 ## Gallery
 
-Recommended: 4–8 edited photos per album, with permission to publish.
+The current gallery contains 18 curated photos covering community, professional development, collaborative learning, career readiness, campus outreach, student engagement, and chapter visibility.
 
-- [x] Professional development/workshop photos
-- [x] Community and outreach photos
-- [ ] Industry networking and sponsor photos
-- [ ] Academic support/study-session photos
-- [ ] Conference or chapter travel photos
-- [ ] Awards, graduations, or milestone photos
-- [ ] Optional captions, dates, and photographer credits
+- [x] Professional development and career-readiness photos
+- [x] Community, outreach, and student-engagement photos
+- [x] Descriptive captions and accessibility text
+- [ ] Optional future albums for sponsor networking, academic support, conference travel, and major milestones when genuine media becomes available
+- [ ] Optional dates and photographer credits
 
 ## Contact and infrastructure
 
