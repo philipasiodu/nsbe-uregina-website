@@ -12,9 +12,9 @@ This checklist covers the placeholder content that still needs to be supplied be
 ## Executive team
 
 - [x] Names, role titles, and academic programs for all 12 current executives
-- [x] Headshots for 10 current executives
+- [x] Headshots for 11 current executives
 - [ ] Headshot for Mal Giesbrecht, Social Media Director
-- [ ] Headshot for Tijesunimi Afolabi, Media Director
+- [x] Headshot for Tijesunimi Afolabi, Media Director
 - [x] Responsibilities documented for all 12 executive positions
 - [x] Individual contact fields removed by chapter decision
 - [x] Individual LinkedIn fields omitted by chapter decision

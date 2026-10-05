@@ -105,6 +105,7 @@ export const executives: Executive[] = [
     role: "Media Director",
     name: "Tijesunimi Afolabi",
     program: "Arts and Science",
+    image: "/media/executives/tijesunimi.jpg",
     focus: "Coordinates event photography, video, visual storytelling, and the chapter media archive.",
   },
 ];
