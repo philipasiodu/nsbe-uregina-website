@@ -97,10 +97,14 @@ export const executives: Executive[] = [
   },
   {
     role: "Social Media Director",
+    name: "Mal Giesbrecht",
+    program: "Sociology & Public Relations",
     focus: "Manages chapter social channels, content planning, and online community engagement.",
   },
   {
     role: "Media Director",
+    name: "Tijesunimi Afolabi",
+    program: "Arts and Science",
     focus: "Coordinates event photography, video, visual storytelling, and the chapter media archive.",
   },
 ];

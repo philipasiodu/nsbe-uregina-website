@@ -159,8 +159,8 @@ export default function AboutPage() {
         <div className="mx-auto flex max-w-7xl flex-col gap-8 px-4 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-green-300">URegina today</p>
-            <h2 className="mt-4 text-3xl font-black">Ten students leading one shared mission.</h2>
-            <p className="mt-3 max-w-2xl text-white/65">Meet the team supporting chapter operations, campus relationships, events and communications, policy, technology, technical programming, and media—with two roles currently open.</p>
+            <h2 className="mt-4 text-3xl font-black">Twelve students leading one shared mission.</h2>
+            <p className="mt-3 max-w-2xl text-white/65">Meet the team supporting chapter operations, campus relationships, events and communications, policy, technology, technical programming, social media, and visual storytelling.</p>
           </div>
           <Link href="/executive-team" className="w-fit rounded-full bg-[#F4C430] px-7 py-3.5 text-sm font-bold text-gray-950 transition-transform hover:-translate-y-0.5">Meet the team →</Link>
         </div>

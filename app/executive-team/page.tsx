@@ -28,7 +28,7 @@ export default function ExecutiveTeamPage() {
               title="Student leadership in action."
               description="Our executive team brings together students from engineering and data science to serve the chapter and strengthen its campus community."
             />
-            <span className="w-fit rounded-full bg-green-50 px-4 py-2 text-sm font-bold text-[#006B3C] dark:bg-green-400/10 dark:text-green-300">10 executives · 2 vacancies</span>
+            <span className="w-fit rounded-full bg-green-50 px-4 py-2 text-sm font-bold text-[#006B3C] dark:bg-green-400/10 dark:text-green-300">12 executives</span>
           </div>
 
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -51,7 +51,7 @@ export default function ExecutiveTeamPage() {
                   ) : (
                     <div className="flex h-full flex-col items-center justify-center gap-3 px-6 text-center text-[#006B3C] dark:text-green-300">
                       <span className="flex h-16 w-16 items-center justify-center rounded-full border-2 border-dashed border-current text-2xl font-black" aria-hidden>+</span>
-                      <span className="text-xs font-black uppercase tracking-[0.2em]">Position vacant</span>
+                      <span className="text-xs font-black uppercase tracking-[0.2em]">{isVacant ? "Position vacant" : "Photo coming soon"}</span>
                     </div>
                   )}
                   <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/45 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
