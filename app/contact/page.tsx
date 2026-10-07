@@ -16,6 +16,8 @@ export default function ContactPage() {
         eyebrow="Contact"
         title="Let’s start a conversation."
         description="Reach out about membership, events, sponsorship, collaborations, or anything else related to the chapter."
+        image="/media/about/chapter-community.jpg"
+        imagePosition="center 45%"
       />
       <section className="bg-gray-50 py-24 dark:bg-[#0b1712]">
         <div className="mx-auto grid max-w-7xl gap-14 px-4 sm:px-6 lg:grid-cols-[0.72fr_1.28fr] lg:px-8">

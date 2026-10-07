@@ -9,7 +9,7 @@ export const metadata: Metadata = { title: "Gallery", description: "Photos from 
 export default function GalleryPage() {
   return (
     <>
-      <PageHero eyebrow="Photo gallery" title="Community, captured." description="A growing record of the people, programs, and moments that shape NSBE University of Regina." primary={{ label: "View photos", href: "#photos" }} />
+      <PageHero eyebrow="Photo gallery" title="Community, captured." description="A growing record of the people, programs, and moments that shape NSBE University of Regina." image="/media/events/fall-kickoff/mixer-1.jpg" imagePosition="center 45%" primary={{ label: "View photos", href: "#photos" }} />
       <section id="photos" className="bg-white py-24 dark:bg-[#07110d]"><div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><SectionHeading eyebrow="Chapter moments" title="Community in action." description="Explore moments from chapter mixers, professional development workshops, and campus outreach. Select a photo to open the full-screen viewer." /><div className="mt-12"><GalleryExplorer items={galleryItems} /></div></div></section>
     </>
   );

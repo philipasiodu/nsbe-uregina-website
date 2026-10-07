@@ -34,6 +34,8 @@ export default function MembershipPage() {
         eyebrow="Membership"
         title="You belong in the room."
         description="Join a community that supports your academic journey, career goals, leadership growth, and sense of belonging in STEM."
+        image="/media/gallery/campus-outreach/student-engagement.jpeg"
+        imagePosition="center 55%"
         primary={{ label: "Start your membership", href: "#join" }}
         secondary={{ label: "Explore member benefits", href: "#benefits" }}
       />

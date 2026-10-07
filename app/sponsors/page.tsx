@@ -70,6 +70,8 @@ export default function SponsorsPage() {
         eyebrow="Partnerships"
         title="Invest in the next generation."
         description="Partner with NSBE URegina to expand opportunities for Black students while building meaningful talent, community, and brand relationships."
+        image="/media/gallery/interview-workshop/speaker-session.jpeg"
+        imagePosition="center 38%"
         primary={{ label: "Explore sponsorship options", href: "#programs" }}
         secondary={{ label: "Why partner with us", href: "#why-partner" }}
       />

@@ -17,6 +17,8 @@ export default function ExecutiveTeamPage() {
         eyebrow="Executive team"
         title="One team. One chapter."
         description="Meet the students responsible for chapter strategy, member experience, events, partnerships, communications, advocacy, and continuity."
+        image="/media/homepage/chapter-group.jpg"
+        imagePosition="center 48%"
         primary={{ label: "Join the chapter", href: "/membership" }}
       />
 

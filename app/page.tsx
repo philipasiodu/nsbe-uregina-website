@@ -78,37 +78,21 @@ export default function HomePage() {
 
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
       <section className="relative min-h-screen flex items-center bg-[#006B3C] overflow-hidden">
-
-        {/* Hard grid overlay */}
-        <div
-          className="hero-grid absolute inset-0 opacity-[0.07]"
-          style={{
-            backgroundImage: `linear-gradient(rgba(255,255,255,1) 1px, transparent 1px),
-                              linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)`,
-            backgroundSize: "80px 80px",
-          }}
+        <Image
+          src="/media/homepage/chapter-group.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
         />
-
-        {/* Background watermark */}
-        <span
-          className="absolute right-0 bottom-0 font-black text-white select-none pointer-events-none leading-none"
-          style={{
-            fontSize: "22vw",
-            opacity: 0.04,
-            letterSpacing: "-0.05em",
-          }}
-          aria-hidden
-        >
-          NSBE
-        </span>
-
-        {/* Left rule */}
-        <div className="absolute left-0 top-0 h-full w-1 bg-white opacity-20" />
+        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#052b1e]/95 via-[#06472f]/82 to-[#063d2a]/35" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-40 w-full">
           <div className="max-w-4xl">
 
-            <p className="text-white/50 text-xs font-bold tracking-[0.3em] uppercase mb-8">
+            <p className="text-white/75 text-xs font-bold tracking-[0.3em] uppercase mb-8">
               Student-led &nbsp;·&nbsp; University of Regina Chapter
             </p>
 
@@ -123,7 +107,7 @@ export default function HomePage() {
               for Canada.
             </h1>
 
-            <p className="text-white/60 text-lg sm:text-xl max-w-lg leading-relaxed mb-12 font-light">
+            <p className="text-white/85 text-lg sm:text-xl max-w-lg leading-relaxed mb-12 font-light">
               We are the National Society of Black Engineers — a chapter of students
               committed to academic excellence, professional growth, and lasting community.
             </p>
@@ -195,8 +179,8 @@ export default function HomePage() {
             <div className="relative">
               <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-gray-100 shadow-xl">
                 <Image
-                  src="/media/homepage/chapter-group.jpg"
-                  alt="The NSBE University of Regina executive team seated together in a lecture hall"
+                  src="/media/about/chapter-community.jpg"
+                  alt="NSBE University of Regina members connecting at a chapter gathering"
                   fill
                   sizes="(min-width: 1024px) 50vw, 100vw"
                   className="object-cover object-center"

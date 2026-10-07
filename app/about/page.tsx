@@ -29,6 +29,8 @@ export default function AboutPage() {
         eyebrow="About NSBE URegina"
         title="Built for belonging. Driven by excellence."
         description="Our student-led chapter connects the University of Regina to a global community of Black engineers, technologists, leaders, and allies."
+        image="/media/about/chapter-belonging.jpg"
+        imagePosition="center 52%"
         primary={{ label: "Meet the executive team", href: "/executive-team" }}
         secondary={{ label: "Join the chapter", href: "/membership" }}
       />
