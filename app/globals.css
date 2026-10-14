@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -8,19 +10,67 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-nunito-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+[data-theme="dark"] {
+  --background: #07110d;
+  --foreground: #f3f4f6;
+  color-scheme: dark;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-nunito-sans), "Trebuchet MS", sans-serif;
+  font-optical-sizing: auto;
+}
+
+body,
+header,
+main,
+section,
+footer {
+  transition-property: background-color, border-color, color;
+  transition-duration: 250ms;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.scroll-cue {
+  animation: scroll-cue 1.8s ease-in-out infinite;
+  transform-origin: top;
+}
+
+@keyframes scroll-cue {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scaleY(0.45);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .scroll-cue {
+    animation: none;
+  }
+
+  body,
+  header,
+  main,
+  section,
+  footer {
+    transition: none;
+  }
 }
