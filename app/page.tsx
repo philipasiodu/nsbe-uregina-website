@@ -186,7 +186,7 @@ export default function HomePage() {
                   className="object-cover object-center"
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent px-6 pb-5 pt-16">
-                  <p className="text-sm font-semibold text-white">NSBE URegina executive team</p>
+                  <p className="text-sm font-semibold text-white">NSBE URegina members connecting in community</p>
                 </div>
               </div>
               {/* Hard offset accent */}
@@ -300,7 +300,7 @@ export default function HomePage() {
             <FeaturedEventCarousel />
             <div className="flex flex-col justify-center p-8 sm:p-12">
               <p className="text-xs font-bold uppercase tracking-[0.25em] text-green-400">
-                Featured event
+                Next on the calendar
               </p>
               <h3 className="mt-5 text-3xl font-black tracking-tight text-white sm:text-4xl">
                 {FEATURED_EVENT.title}
@@ -315,7 +315,7 @@ export default function HomePage() {
                 </div>
                 <div>
                   <dt className="text-xs font-bold uppercase tracking-widest text-white/35">Location</dt>
-                  <dd className="mt-2 font-bold text-white">ED 114</dd>
+                  <dd className="mt-2 font-bold text-white">{FEATURED_EVENT.location}</dd>
                 </div>
               </dl>
               <Link
@@ -351,6 +351,7 @@ export default function HomePage() {
                     <span className="rounded-full border border-green-200 bg-green-50 px-2.5 py-1 text-xs font-bold text-[#006B3C] dark:border-green-400/20 dark:bg-green-400/10 dark:text-green-300">
                       {event.category}
                     </span>
+                    {event.tentative && <span className="rounded-full border border-amber-200 bg-amber-50 px-2.5 py-1 text-xs font-bold text-amber-700 dark:border-amber-300/20 dark:bg-amber-300/10 dark:text-amber-200">Tentative</span>}
                   </div>
                   <p className="text-gray-400 text-sm dark:text-gray-400">{event.location}</p>
                 </div>

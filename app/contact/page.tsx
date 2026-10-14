@@ -37,7 +37,7 @@ export default function ContactPage() {
               <div className="rounded-2xl border border-gray-200 bg-white p-6 dark:border-white/10 dark:bg-[#122019]">
                 <p className="text-xs font-bold uppercase tracking-widest text-[#006B3C] dark:text-green-400">Campus location</p>
                 <p className="mt-3 font-bold text-gray-950 dark:text-white">University of Regina</p>
-                <p className="mt-2 text-sm text-gray-500 dark:text-gray-300">Office or regular meeting location needed.</p>
+                <p className="mt-2 text-sm text-gray-500 dark:text-gray-300">Event rooms and attendance details are published with each event as they are confirmed.</p>
               </div>
             </div>
             <div className="mt-8 flex flex-wrap gap-3">
@@ -54,7 +54,7 @@ export default function ContactPage() {
               ))}
             </div>
           </div>
-          <div><ContactForm /></div>
+          <div><ContactForm email={chapterLinks.email} emailHref={chapterLinks.emailHref} /></div>
         </div>
       </section>
     </>

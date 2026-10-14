@@ -7,7 +7,7 @@ import { chapterLinks, executives } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Executive Team",
-  description: "Meet the student leaders serving the NSBE University of Regina chapter and explore open executive positions.",
+  description: "Meet the student leaders serving the NSBE University of Regina chapter.",
 };
 
 export default function ExecutiveTeamPage() {
@@ -34,40 +34,25 @@ export default function ExecutiveTeamPage() {
           </div>
 
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {executives.map((executive) => {
-              const isVacant = !executive.name;
-              return (
+            {executives.map((executive) => (
               <article
                 key={executive.role}
                 className="group overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-[#006B3C]/40 hover:shadow-xl dark:border-white/10 dark:bg-[#122019]"
               >
                 <div className="relative aspect-[4/3] overflow-hidden bg-[#edf6f1] dark:bg-[#102019]">
-                  {executive.image ? (
-                    <Image
-                      src={executive.image}
-                      alt={`${executive.name}, ${executive.role} for NSBE University of Regina`}
-                      fill
-                      sizes="(min-width: 1280px) 25vw, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                      className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.035]"
-                    />
-                  ) : (
-                    <div className="flex h-full flex-col items-center justify-center gap-3 px-6 text-center text-[#006B3C] dark:text-green-300">
-                      <span className="flex h-16 w-16 items-center justify-center rounded-full border-2 border-dashed border-current text-2xl font-black" aria-hidden>+</span>
-                      <span className="text-xs font-black uppercase tracking-[0.2em]">{isVacant ? "Position vacant" : "Photo coming soon"}</span>
-                    </div>
-                  )}
+                  <Image
+                    src={executive.image}
+                    alt={`${executive.name}, ${executive.role} for NSBE University of Regina`}
+                    fill
+                    sizes="(min-width: 1280px) 25vw, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.035]"
+                  />
                   <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/45 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 </div>
                 <div className="p-6">
                   <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#006B3C] dark:text-green-400">{executive.role}</p>
-                  {isVacant ? (
-                    <p className="mt-3 text-sm font-bold text-amber-700 dark:text-amber-300">Applications welcome</p>
-                  ) : (
-                    <>
-                      <h2 className="mt-3 text-2xl font-black text-gray-950 dark:text-white">{executive.name}</h2>
-                      <p className="mt-2 text-sm leading-relaxed text-gray-500 dark:text-gray-300">{executive.program}</p>
-                    </>
-                  )}
+                  <h2 className="mt-3 text-2xl font-black text-gray-950 dark:text-white">{executive.name}</h2>
+                  <p className="mt-2 text-sm leading-relaxed text-gray-500 dark:text-gray-300">{executive.program}</p>
                   {executive.focus ? (
                     <p className="mt-4 border-t border-gray-100 pt-4 text-sm leading-relaxed text-gray-600 dark:border-white/10 dark:text-gray-300">
                       {executive.focus}
@@ -75,8 +60,7 @@ export default function ExecutiveTeamPage() {
                   ) : null}
                 </div>
               </article>
-              );
-            })}
+            ))}
           </div>
         </div>
       </section>

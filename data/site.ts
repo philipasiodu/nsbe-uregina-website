@@ -18,9 +18,9 @@ export const chapterLinks = {
 
 export type Executive = {
   role: string;
-  name?: string;
-  program?: string;
-  image?: string;
+  name: string;
+  program: string;
+  image: string;
   focus?: string;
 };
 
@@ -120,6 +120,7 @@ export type ChapterEvent = {
   location: string;
   category: "Community" | "Career" | "Academic" | "Networking";
   status: "Upcoming" | "Past";
+  tentative?: boolean;
   description: string;
   highlights?: string[];
   registrationUrl?: string;
@@ -135,7 +136,7 @@ export const chapterEvents: ChapterEvent[] = [
     time: "6:00–8:30 PM",
     location: "ED 114 — University of Regina",
     category: "Community",
-    status: "Upcoming",
+    status: "Past",
     description: "Help launch chapter year two with community-building, chapter updates, member participation, elections, and a shared vision for NSBE URegina's 2026–27 year.",
     highlights: [
       "Registration, opening remarks, an icebreaker, food, and networking",
@@ -144,6 +145,45 @@ export const chapterEvents: ChapterEvent[] = [
       "A member brainstorm on events, academic support, industry connections, and campus impact",
     ],
     attendanceNote: "No advance registration is listed. Doors open at 6:00 PM in ED 114.",
+  },
+  {
+    id: 2,
+    title: "Sponsored Technical Workshop",
+    date: "2027-01-28",
+    displayDate: "January 28, 2027",
+    time: "6:00 PM",
+    location: "University of Regina — room to be announced",
+    category: "Career",
+    status: "Upcoming",
+    tentative: true,
+    description: "A sponsor-supported technical learning session designed to help students build practical skills and connect classroom learning with industry.",
+    attendanceNote: "Tentative date and time. Room, sponsor, and registration details will be announced when confirmed.",
+  },
+  {
+    id: 3,
+    title: "Black History Fest",
+    date: "2027-02-18",
+    displayDate: "February 18, 2027",
+    time: "6:00 PM",
+    location: "University of Regina — room to be announced",
+    category: "Community",
+    status: "Upcoming",
+    tentative: true,
+    description: "A chapter gathering celebrating Black history, culture, community, and the contributions of Black students and professionals.",
+    attendanceNote: "Tentative date and time. Location and attendance details will be announced when confirmed.",
+  },
+  {
+    id: 4,
+    title: "Engineering Unfiltering",
+    date: "2027-03-11",
+    displayDate: "March 11, 2027",
+    time: "6:00 PM",
+    location: "University of Regina — room to be announced",
+    category: "Networking",
+    status: "Upcoming",
+    tentative: true,
+    description: "An honest conversation about engineering student life, professional growth, and the experiences that often go unspoken.",
+    attendanceNote: "Tentative date and time. Format, room, and registration details will be announced when confirmed.",
   },
 ];
 

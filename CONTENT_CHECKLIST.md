@@ -1,6 +1,6 @@
 # NSBE URegina Website Content Checklist
 
-This checklist covers the placeholder content that still needs to be supplied before public launch.
+This checklist tracks supplied content and optional additions that can be made after the initial public launch.
 
 ## Branding and global media
 
@@ -38,7 +38,9 @@ For every event:
 - [x] Event category for the Fall 2026 AGM & Chapter Kickoff
 - [ ] Optional event poster or cover image
 
-The sample schedule has been removed. Future events still need the same confirmed information before they are added.
+- [x] Winter 2027 tentative dates and times for the Sponsored Technical Workshop, Black History Fest, and Engineering Unfiltering
+- [ ] Confirmed rooms, partners, formats, and registration links for the three Winter 2027 events
+- [ ] Optional event posters or cover images
 
 ## Membership
 
@@ -70,8 +72,8 @@ The current gallery contains 18 curated photos covering community, professional 
 
 - [x] Official chapter email address
 - [ ] Regular meeting location or office details, if public
-- [ ] Supabase project URL and public anon key
-- [ ] Confirmed destination for contact-form notifications
+- [x] Contact form opens a pre-addressed email draft to the chapter inbox
+- [ ] Supabase project URL and public anon key, only if database-backed forms or an admin dashboard are added later
 - [ ] Production domain name
 - [ ] Analytics choice and account access
 

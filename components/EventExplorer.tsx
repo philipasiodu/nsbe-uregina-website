@@ -33,7 +33,10 @@ export default function EventExplorer({ events }: { events: ChapterEvent[] }) {
         {filteredEvents.map((event) => (
           <article key={event.id} className="group flex flex-col rounded-2xl border border-gray-200 bg-white p-7 shadow-sm transition-all hover:-translate-y-1 hover:border-[#006B3C]/40 hover:shadow-xl dark:border-white/10 dark:bg-[#122019]">
             <div className="flex items-start justify-between gap-4">
-              <span className="rounded-full bg-green-50 px-3 py-1 text-xs font-bold text-[#006B3C] dark:bg-green-400/10 dark:text-green-300">{event.category}</span>
+              <div className="flex flex-wrap gap-2">
+                <span className="rounded-full bg-green-50 px-3 py-1 text-xs font-bold text-[#006B3C] dark:bg-green-400/10 dark:text-green-300">{event.category}</span>
+                {event.tentative && <span className="rounded-full bg-amber-50 px-3 py-1 text-xs font-bold text-amber-700 dark:bg-amber-300/10 dark:text-amber-200">Tentative</span>}
+              </div>
               <time dateTime={event.date} className="text-right text-xs font-bold uppercase tracking-wider text-gray-400">{event.displayDate}</time>
             </div>
             <h3 className="mt-7 text-2xl font-black tracking-tight text-gray-950 group-hover:text-[#006B3C] dark:text-white dark:group-hover:text-green-300">{event.title}</h3>
